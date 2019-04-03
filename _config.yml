@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "My Journey into Research blog"
+title                    : "My Journey into Research: A (we)blog"
 title_separator          : "-"
 name                     : "Paul Grant"
 description              : "Musings and interesting things I find."
