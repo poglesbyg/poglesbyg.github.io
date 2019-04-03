@@ -16,3 +16,6 @@ I legitimately deleted this repo on Github multiple times before the theme actua
 - [Deep contextualized word representations](https://arxiv.org/abs/1802.05365)
 - [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146)
 - [Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+## What I watched today:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v16uzPYho4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
