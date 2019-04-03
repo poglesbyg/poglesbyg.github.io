@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "I thought Github pages was supposed to be easy."
 ---
 
