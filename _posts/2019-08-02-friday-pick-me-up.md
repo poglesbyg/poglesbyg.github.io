@@ -12,3 +12,9 @@ I'm a man of many lists. I have spreadsheets and spreadsheets, though I've yet t
 ## The other part of my job
 
 I'm lucky in the fact that I am able to have a multifaceted job. I'm able to work on many different types of tasks on a daily basis. Some are more administrative, but others fall very heavily into the range of bioinformatics.
+
+## After lunch
+
+I had planned to write more this morning, but I got sucked into trying to figure out how Google analytics works. It is a very cool piece of software. Regardless, I'm now in the process of reading several articles and researching the different biobanks at large research universities.
+
+I hit that after lunch slump. It is half past 3 and I got tired. I already had a coffee, and I certainly don't need any more caffeine. I have my to do list and I need to just keep chugging through. What else do I need to do today?
