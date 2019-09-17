@@ -106,18 +106,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Paul Grant"
+  name             : "P. Grant"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I guess you want to know what I'm thinking."
   location         : "Chapel Hill, NC, USA"
-  email            : paul_grant@med.unc.edu
+  email            : poglesbyg@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      # url: "https://poglesbyg.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -136,13 +136,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/poglesbyg"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/poglesbyg"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
