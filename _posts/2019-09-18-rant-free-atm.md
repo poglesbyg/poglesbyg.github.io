@@ -1,6 +1,6 @@
 ---
 layout: single
-title: nothing is free
+title: strangely rant free 
 ---
 # Strangely rant free
 I'm strangely rant free today. I was reading David Graeber's _Bullshit Jobs_ this morning, but it did not incense me. I thoroughly enjoy it, but at the same time it makes me think about the bureaucratic system that I live and work in.
