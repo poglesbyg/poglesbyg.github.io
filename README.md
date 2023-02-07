@@ -1,3 +1,4 @@
 # README for poglesbyg.github.io
 
-hello world
+This is the source for my personal website, [poglesbyg.github.io](https://poglesbyg.github.io/).
+
