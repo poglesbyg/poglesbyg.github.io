@@ -6,21 +6,19 @@ console.clear();
 
 //// READING:
 function handlePatients(data) {
-	console.log("type of data:", typeof data);
-  //console.log(data)
-  //return;
-  //console.log(data.entry.length);
-  //return;
-	console.log("Reading items in data.entry:");
   for (var d in data.entry) {
-		console.log("id:", data.entry[d].resource.id);
-    console.log("family name:", data.entry[d].resource.name[0].family);
-    console.log("first given name:", data.entry[d].resource.name[0].given[0]);
-    console.log("-----------");
-	}
+  	$("#patients").append($("<tr>")
+    	.html("<td>"
+        +data.entry[d].resource.id+"</td><td>"
+      	+data.entry[d].resource.name[0].family+"</td><td>"
+      	+data.entry[d].resource.name[0].given[0]+"</td><td>"
+        +data.entry[d].resource.birthDate+"</td><td>"
+        +"</td>"
+        ));
+  }
 }
-//client.request("Patient?name=Smith").then(handlePatients).catch(console.error);
-//client.request("Patient?name=McFly").then(handlePatients).catch(console.error);
+client.request("Patient?name=Smith").then(handlePatients).catch(console.error);
+client.request("Patient?name=McFly").then(handlePatients).catch(console.error);
 
 //// We should wrap this all up into a function to show patients by name. (We'll use it further below!)
 function showPatientsByName(lastname) {
@@ -91,9 +89,6 @@ function updateMartyMcFly() {
     }
   });
 }
-
-
-
 
 //// DELETING
 function deletePatient(id) {
