@@ -92,7 +92,7 @@ function addPractitionerRow(practitioner) {
   td.appendChild(btn);
   var btn = document.createElement("button");
   btn.innerHTML = "[Edit]";
-  //btn.onclick = updatePractitioner.bind({practitioner:practitioner, row:tr});
+  // btn.onclick = updatePractitioner.bind({practitioner:practitioner, row:tr});
   td.appendChild(btn);
   tr.appendChild(td);
 
