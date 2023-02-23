@@ -3,20 +3,17 @@
   <script 
     src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js">
   </script>
-  <script src="./scripts/script.js">
-  </script>
+  <script src="./scripts/script_dr.js"></script>
   <script src="./scripts/clock.js"></script>
 </head>
 
-<body onload="startTime()">
-
+<tbody onload="startTime()">
   <pre id='pre'></pre>
 
   <div id="txt"></div>
 
-
-  <button onclick="showPatients();">Search Patients</button>
-  <button onclick="addPatient();">Add Patient</button>
+  <button onclick="showPractitioners();">Search Practitioner</button>
+  <button onclick="addPractitioner();">Add Practitioner</button>
   <hr />
   <table>
     <thead>
@@ -24,9 +21,12 @@
       <th>Last Name</th>
       <th>actions</th>
     </thead>
-    <tbody id="patientResults">
+    <tbody id="practitionerResults">
       
     </tbody>
   </table>
+
+
   
-  
+</tbody>
+ 
