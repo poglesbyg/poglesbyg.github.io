@@ -3,9 +3,9 @@
   <script 
     src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js">
   </script>
-  <script src="script.js">
+  <script src="./scripts/script.js">
   </script>
-  <script src="other_script.js"></script>
+  <script src="./scripts/clock.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -14,24 +14,19 @@
 
   <div id="txt"></div>
 
-  
-<button onclick="deleteMarty();">Delete a Marty!</button>
-<button onclick="showMcFlies();">Show McFlies!</button>
-<button onclick="updateMartyMcFly();">Update Marty!</button>
-<button onclick="addMartyMcFly();">Add Marty!</button>
 
-  <table id="table">
+  <button onclick="showPatients();">Search Patients</button>
+  <button onclick="addPatient();">Add Patient</button>
+  <hr />
+  <table>
     <thead>
-      <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Birth Date</th>
-        <th>Year</th>
-      </tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>actions</th>
     </thead>
-    <tbody id="patients">
-
+    <tbody id="patientResults">
+      
     </tbody>
   </table>
-
+  
+  
