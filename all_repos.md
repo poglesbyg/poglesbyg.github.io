@@ -73,46 +73,56 @@ Welcome to my project showcase! I'm a software developer with strong expertise i
 <!-- Add custom styles -->
 <style>
 :root {
-    --primary-color: #2d3436;
-    --secondary-color: #0984e3;
-    --accent-color: #00b894;
-    --background-color: #f5f6fa;
-    --card-background: #ffffff;
-    --text-color: #2d3436;
-    --text-light: #636e72;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    /* Modern color palette */
+    --primary-color: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary-color: #10b981;
+    --accent-color: #f43f5e;
+    --background-color: #f8fafc;
+    --card-background: rgba(255, 255, 255, 0.9);
+    --text-color: #1e293b;
+    --text-light: #64748b;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --gradient-start: #6366f1;
+    --gradient-end: #10b981;
 }
 
 body {
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, var(--background-color) 0%, #e2e8f0 100%);
     color: var(--text-color);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
     padding: 2rem 1rem;
+    position: relative;
 }
 
+/* Glassmorphism card design */
 .card {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     background: var(--card-background);
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 4px 6px var(--shadow-color);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px var(--shadow-color);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px var(--shadow-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px var(--shadow-color);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .card-content {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1.75rem;
 }
 
 .content {
@@ -120,81 +130,135 @@ body {
 }
 
 .title {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-weight: 700;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
     color: var(--text-light);
+    font-weight: 500;
 }
 
+/* Modern tag design */
 .tags {
-    margin: 0.75rem 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .tag {
-    border-radius: 6px;
-    font-weight: 500;
-    padding: 0.4em 0.8em;
-}
-
-.tag.is-python {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.python-badge {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.4em 0.8em;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    margin-left: 0.5rem;
-    font-weight: 500;
-}
-
-.input {
     border-radius: 8px;
-    border: 2px solid #e0e0e0;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     transition: all 0.3s ease;
 }
 
+.tag:hover {
+    background: rgba(99, 102, 241, 0.15);
+    transform: translateY(-1px);
+}
+
+.tag.is-python {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border: none;
+}
+
+.python-badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Modern form elements */
+.input {
+    border-radius: 12px;
+    border: 2px solid rgba(99, 102, 241, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+}
+
 .input:focus {
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 0.125em rgba(9, 132, 227, 0.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    background: white;
 }
 
 .select select {
-    border-radius: 8px;
-    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    border: 2px solid rgba(99, 102, 241, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
 }
 
+/* Modern notifications */
 .notification {
-    border-radius: 8px;
-    padding: 1.25rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .progress {
-    border-radius: 4px;
+    border-radius: 8px;
     height: 0.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    overflow: hidden;
+}
+
+.progress::-webkit-progress-bar {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.progress::-webkit-progress-value {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 8px;
 }
 
 #featured-projects {
     margin-bottom: 3rem;
+    position: relative;
 }
 
-.level-item {
-    color: var(--text-light);
-}
-
+/* Modern icon styling */
 .icon-text {
     align-items: center;
     display: inline-flex;
     gap: 0.5rem;
+    color: var(--text-light);
+    transition: all 0.3s ease;
 }
 
 .icon {
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.icon-text:hover {
+    color: var(--primary-color);
+}
+
+.icon-text:hover .icon {
+    transform: scale(1.1);
 }
 
 /* Custom scrollbar */
@@ -203,17 +267,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(99, 102, 241, 0.1);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
+    background: linear-gradient(to bottom, var(--gradient-end), var(--gradient-start));
 }
 
 /* Responsive improvements */
@@ -223,23 +287,55 @@ body {
     }
     
     .card-content {
-        padding: 1rem;
+        padding: 1.25rem;
     }
     
     .title {
         font-size: 1.25rem;
     }
+    
+    .card {
+        border-radius: 12px;
+    }
 }
 
-/* Animation for loading state */
+/* Loading animation */
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 .progress.is-primary {
-    animation: pulse 1.5s infinite;
+    animation: pulse 2s infinite;
+}
+
+/* Hover effects for interactive elements */
+a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 </style>
 
