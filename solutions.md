@@ -349,3 +349,193 @@ layout: default
         </div>
     </div>
 </div>
+
+## Data Science Solutions
+
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Analytics & Insights</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-description">
+                <p>Advanced analytics and data insights solutions to drive informed decision-making.</p>
+            </div>
+            <div class="solution-section">
+                <h4>Business Intelligence</h4>
+                <ul>
+                    <li>
+                        <strong>Data Visualization</strong>
+                        <ul>
+                            <li>Interactive dashboards</li>
+                            <li>Real-time analytics</li>
+                            <li>Custom reporting</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Performance Metrics</strong>
+                        <ul>
+                            <li>KPI tracking</li>
+                            <li>Trend analysis</li>
+                            <li>Competitive benchmarking</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Predictive Analytics</h4>
+                <ul>
+                    <li>Forecasting models</li>
+                    <li>Risk assessment</li>
+                    <li>Market trend analysis</li>
+                    <li>Customer behavior prediction</li>
+                    <li>Resource optimization</li>
+                </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-database"></i>
+            <h3>Data Engineering</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-description">
+                <p>Robust data engineering solutions for efficient data processing and management.</p>
+            </div>
+            <div class="solution-section">
+                <h4>Data Pipeline Solutions</h4>
+                <ul>
+                    <li>
+                        <strong>ETL Development</strong>
+                        <ul>
+                            <li>Data extraction</li>
+                            <li>Transformation workflows</li>
+                            <li>Loading optimization</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Data Quality</strong>
+                        <ul>
+                            <li>Validation frameworks</li>
+                            <li>Cleansing automation</li>
+                            <li>Quality monitoring</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Big Data Solutions</h4>
+                <ul>
+                    <li>Distributed processing</li>
+                    <li>Data lake architecture</li>
+                    <li>Stream processing</li>
+                    <li>Real-time analytics</li>
+                    <li>Scalable storage</li>
+                </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-microscope"></i>
+            <h3>Machine Learning</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-description">
+                <p>End-to-end machine learning solutions for business automation and intelligence.</p>
+            </div>
+            <div class="solution-section">
+                <h4>ML Development</h4>
+                <ul>
+                    <li>
+                        <strong>Model Development</strong>
+                        <ul>
+                            <li>Custom model training</li>
+                            <li>Feature engineering</li>
+                            <li>Model optimization</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Deployment</strong>
+                        <ul>
+                            <li>Model serving</li>
+                            <li>API integration</li>
+                            <li>Performance monitoring</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>AI Applications</h4>
+                <ul>
+                    <li>Natural language processing</li>
+                    <li>Computer vision systems</li>
+                    <li>Recommendation engines</li>
+                    <li>Anomaly detection</li>
+                    <li>Automated decision systems</li>
+                </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Explore Solutions</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-flask"></i>
+            <h3>Research & Development</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-description">
+                <p>Innovative research and development solutions for cutting-edge data science applications.</p>
+            </div>
+            <div class="solution-section">
+                <h4>Research Services</h4>
+                <ul>
+                    <li>
+                        <strong>Methodology</strong>
+                        <ul>
+                            <li>Experimental design</li>
+                            <li>Statistical analysis</li>
+                            <li>Hypothesis testing</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Implementation</strong>
+                        <ul>
+                            <li>Proof of concept</li>
+                            <li>Prototype development</li>
+                            <li>Technology transfer</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Innovation Areas</h4>
+                <ul>
+                    <li>Deep learning research</li>
+                    <li>Quantum computing</li>
+                    <li>Edge AI solutions</li>
+                    <li>Federated learning</li>
+                    <li>Explainable AI</li>
+                </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
