@@ -31,7 +31,7 @@ layout: default
 
     <div class="contact-form-container">
         <h2>Send a Message</h2>
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xblyrbyg" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
