@@ -5,6 +5,10 @@ layout: default
 
 # Enterprise Solutions
 
+<div class="solutions-intro">
+    <p>Comprehensive enterprise solutions designed to drive digital transformation and operational excellence across healthcare, Linux infrastructure, and cloud environments.</p>
+</div>
+
 ## Healthcare Integration Solutions
 
 <div class="solutions-grid">
@@ -14,6 +18,9 @@ layout: default
             <h3>FHIR Implementation</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>End-to-end FHIR implementation services ensuring seamless healthcare data exchange and interoperability.</p>
+            </div>
             <div class="solution-section">
                 <h4>Patient Data Management</h4>
                 <ul>
@@ -34,6 +41,9 @@ layout: default
                     <li>Remote monitoring</li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Get Started</a>
+            </div>
         </div>
     </div>
 
@@ -43,6 +53,9 @@ layout: default
             <h3>Healthcare Analytics</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Advanced analytics solutions for healthcare data visualization and insights.</p>
+            </div>
             <div class="solution-section">
                 <h4>Data Visualization</h4>
                 <ul>
@@ -52,6 +65,9 @@ layout: default
                     <li>Quality metrics</li>
                     <li>Performance indicators</li>
                 </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
             </div>
         </div>
     </div>
@@ -66,6 +82,9 @@ layout: default
             <h3>System Management</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Comprehensive Linux system management solutions for enterprise infrastructure.</p>
+            </div>
             <div class="solution-section">
                 <h4>Server Solutions</h4>
                 <ul>
@@ -116,6 +135,9 @@ layout: default
                     </li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Request Demo</a>
+            </div>
         </div>
     </div>
 
@@ -125,6 +147,9 @@ layout: default
             <h3>Automation Solutions</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Enterprise-grade automation solutions for infrastructure and deployment.</p>
+            </div>
             <div class="solution-section">
                 <h4>Infrastructure Automation</h4>
                 <ul>
@@ -146,6 +171,9 @@ layout: default
                     </li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Get Started</a>
+            </div>
         </div>
     </div>
 </div>
@@ -159,6 +187,9 @@ layout: default
             <h3>API Management</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Comprehensive API management and integration solutions for enterprise systems.</p>
+            </div>
             <div class="solution-section">
                 <h4>Gateway Solutions</h4>
                 <ul>
@@ -179,6 +210,9 @@ layout: default
                     <li>Protocol translation</li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
+            </div>
         </div>
     </div>
 
@@ -188,6 +222,9 @@ layout: default
             <h3>Data Integration</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Robust data integration solutions for enterprise data management.</p>
+            </div>
             <div class="solution-section">
                 <h4>ETL Solutions</h4>
                 <ul>
@@ -197,6 +234,9 @@ layout: default
                     <li>Schema evolution</li>
                     <li>Metadata management</li>
                 </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Request Demo</a>
             </div>
         </div>
     </div>
@@ -211,6 +251,9 @@ layout: default
             <h3>Infrastructure</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Comprehensive cloud infrastructure solutions for modern enterprises.</p>
+            </div>
             <div class="solution-section">
                 <h4>Multi-Cloud Strategy</h4>
                 <ul>
@@ -221,6 +264,9 @@ layout: default
                     <li>Resource scaling</li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Get Started</a>
+            </div>
         </div>
     </div>
 
@@ -230,6 +276,9 @@ layout: default
             <h3>Security Solutions</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Enterprise-grade security solutions for cloud environments.</p>
+            </div>
             <div class="solution-section">
                 <h4>Identity Management</h4>
                 <ul>
@@ -239,6 +288,9 @@ layout: default
                     <li>Audit logging</li>
                     <li>Compliance reporting</li>
                 </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
             </div>
         </div>
     </div>
@@ -253,6 +305,9 @@ layout: default
             <h3>AI/ML Solutions</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Cutting-edge AI and machine learning solutions for enterprise innovation.</p>
+            </div>
             <div class="solution-section">
                 <h4>Emerging Technologies</h4>
                 <ul>
@@ -263,6 +318,9 @@ layout: default
                     <li>Process automation</li>
                 </ul>
             </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Explore Solutions</a>
+            </div>
         </div>
     </div>
 
@@ -272,6 +330,9 @@ layout: default
             <h3>Blockchain</h3>
         </div>
         <div class="solution-content">
+            <div class="solution-description">
+                <p>Enterprise blockchain solutions for secure and transparent operations.</p>
+            </div>
             <div class="solution-section">
                 <h4>Applications</h4>
                 <ul>
@@ -281,6 +342,9 @@ layout: default
                     <li>Asset tracking</li>
                     <li>Decentralized applications</li>
                 </ul>
+            </div>
+            <div class="solution-footer">
+                <a href="/contact" class="solution-cta">Learn More</a>
             </div>
         </div>
     </div>
