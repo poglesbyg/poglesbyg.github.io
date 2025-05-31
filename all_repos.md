@@ -7,6 +7,8 @@ layout: page
 
 Welcome to my project showcase! I'm a Senior Solutions Engineer with expertise in enterprise architecture, system integration, and technical leadership. Here you'll find a collection of my public GitHub repositories, demonstrating my skills and experience in delivering complex technical solutions.
 
+[View my Core Competencies](/competencies)
+
 ## Featured Solutions
 
 <div id="featured-projects" class="featured-grid">
@@ -40,36 +42,6 @@ Welcome to my project showcase! I'm a Senior Solutions Engineer with expertise i
         <!-- Projects will be dynamically loaded here -->
     </div>
 </div>
-
-## Core Competencies
-
-### Enterprise Architecture
-- System Design & Architecture
-- Cloud Infrastructure (AWS, Azure)
-- Security & Compliance
-- Performance Optimization
-- Scalable Solutions
-
-### Technical Leadership
-- Team Mentoring & Development
-- Code Reviews & Best Practices
-- Technical Documentation
-- Project Management
-- Agile Methodologies
-
-### Integration & APIs
-- RESTful API Design
-- Microservices Architecture
-- Third-party Integrations
-- Data Migration
-- System Interoperability
-
-### Development Stack
-- Frontend: React, TypeScript, Modern JavaScript
-- Backend: Node.js, Python, Java
-- Databases: PostgreSQL, MongoDB
-- DevOps: Docker, Kubernetes, CI/CD
-- Tools: Git, AWS, Azure
 
 *Note: This page automatically updates with my latest public repositories. Feel free to explore and reach out if you'd like to discuss potential opportunities!*
 
