@@ -11,7 +11,7 @@ layout: default
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
             <p>Get in touch via email</p>
-            <a href="mailto:contact@poglesbyg.com" class="contact-link">contact@poglesbyg.com</a>
+            <a href="mailto:pogrant@alumni.unc.edu" class="contact-link">pogrant@alumni.unc.edu</a>
         </div>
 
         <div class="contact-card">
