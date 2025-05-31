@@ -67,6 +67,36 @@ As a Senior Solutions Engineer, I bring a comprehensive set of technical and lea
     </div>
 </div>
 
+## .NET Development
+
+<div class="competency-grid">
+    <div class="competency-card">
+        <i class="fas fa-code-branch"></i>
+        <h3>.NET Core & .NET 6+</h3>
+        <p>Building modern, cross-platform applications using the latest .NET technologies.</p>
+    </div>
+    <div class="competency-card">
+        <i class="fas fa-cogs"></i>
+        <h3>ASP.NET Core</h3>
+        <p>Developing high-performance web applications and RESTful APIs.</p>
+    </div>
+    <div class="competency-card">
+        <i class="fas fa-database"></i>
+        <h3>Entity Framework Core</h3>
+        <p>Implementing efficient data access patterns and database interactions.</p>
+    </div>
+    <div class="competency-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>.NET Security</h3>
+        <p>Implementing secure authentication and authorization using Identity and JWT.</p>
+    </div>
+    <div class="competency-card">
+        <i class="fas fa-microchip"></i>
+        <h3>Performance Tuning</h3>
+        <p>Optimizing .NET applications for maximum performance and scalability.</p>
+    </div>
+</div>
+
 ## Integration & APIs
 
 <div class="competency-grid">
@@ -106,12 +136,15 @@ As a Senior Solutions Engineer, I bring a comprehensive set of technical and lea
             <span class="tech-tag">React</span>
             <span class="tech-tag">TypeScript</span>
             <span class="tech-tag">Modern JavaScript</span>
+            <span class="tech-tag">Blazor</span>
         </div>
     </div>
     
     <div class="tech-category">
         <h3><i class="fas fa-server"></i> Backend</h3>
         <div class="tech-tags">
+            <span class="tech-tag">.NET Core</span>
+            <span class="tech-tag">ASP.NET Core</span>
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Java</span>
@@ -123,6 +156,7 @@ As a Senior Solutions Engineer, I bring a comprehensive set of technical and lea
         <div class="tech-tags">
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">SQL Server</span>
         </div>
     </div>
     
@@ -132,6 +166,7 @@ As a Senior Solutions Engineer, I bring a comprehensive set of technical and lea
             <span class="tech-tag">Docker</span>
             <span class="tech-tag">Kubernetes</span>
             <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">Azure DevOps</span>
         </div>
     </div>
     
@@ -141,6 +176,7 @@ As a Senior Solutions Engineer, I bring a comprehensive set of technical and lea
             <span class="tech-tag">Git</span>
             <span class="tech-tag">AWS</span>
             <span class="tech-tag">Azure</span>
+            <span class="tech-tag">Visual Studio</span>
         </div>
     </div>
 </div> 
