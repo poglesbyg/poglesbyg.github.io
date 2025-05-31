@@ -1,6 +1,6 @@
 ---
 title: Core Competencies
-layout: page
+layout: default
 ---
 
 # Core Competencies
