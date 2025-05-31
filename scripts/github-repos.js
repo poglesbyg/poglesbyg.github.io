@@ -1,6 +1,6 @@
 // GitHub API configuration
 const GITHUB_USERNAME = 'poglesbyg';
-const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`;
 
 // DOM Elements
 const reposContainer = document.getElementById('repos');
@@ -8,13 +8,64 @@ const searchInput = document.querySelector('.search');
 const categoryFilter = document.getElementById('category-filter');
 const featuredProjectsContainer = document.getElementById('featured-projects');
 
+// Show loading state
+function showLoading() {
+    reposContainer.innerHTML = `
+        <div class="container has-text-centered">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="notification is-info">
+                        <p>Loading repositories...</p>
+                        <progress class="progress is-small is-primary" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Show error state
+function showError(message) {
+    reposContainer.innerHTML = `
+        <div class="container has-text-centered">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="notification is-danger">
+                        <p>${message}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // Fetch repositories from GitHub
 async function fetchRepositories() {
+    showLoading();
+
     try {
         const response = await fetch(GITHUB_API_URL);
+
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+        }
+
         const repos = await response.json();
+
+        // Filter out forks and archived repositories
+        const filteredRepos = repos.filter(repo =>
+            !repo.fork &&
+            !repo.archived &&
+            repo.owner.login === GITHUB_USERNAME
+        );
+
+        if (filteredRepos.length === 0) {
+            showError('No repositories found. Please check your GitHub username configuration.');
+            return [];
+        }
+
         // Sort Python projects first, then by date
-        return repos.sort((a, b) => {
+        return filteredRepos.sort((a, b) => {
             const aIsPython = a.language === 'Python';
             const bIsPython = b.language === 'Python';
             if (aIsPython && !bIsPython) return -1;
@@ -23,6 +74,7 @@ async function fetchRepositories() {
         });
     } catch (error) {
         console.error('Error fetching repositories:', error);
+        showError('Failed to load repositories. Please try again later.');
         return [];
     }
 }

@@ -124,6 +124,15 @@ Welcome to my project showcase! I'm a software developer with strong expertise i
     margin-left: 0.5rem;
 }
 
+/* Loading and error states */
+.notification {
+    margin: 1rem 0;
+}
+
+.progress {
+    margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 768px) {
     .column {
         padding: 0.5rem;
@@ -132,4 +141,4 @@ Welcome to my project showcase! I'm a software developer with strong expertise i
 </style>
 
 <!-- Add GitHub integration script -->
-<script src="scripts/github-repos.js"></script>
+<script src="scripts/github-repos.js" defer></script>
