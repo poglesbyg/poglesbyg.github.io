@@ -1500,4 +1500,125 @@ a:hover {
         max-width: 600px;
         margin: 0 auto;
     }
+}
+
+/* Solutions Page Styles */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.solution-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+.solution-header {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.solution-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.solution-header h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.25rem;
+}
+
+.solution-content {
+    padding: 1.5rem;
+}
+
+.solution-section {
+    margin-bottom: 1.5rem;
+}
+
+.solution-section:last-child {
+    margin-bottom: 0;
+}
+
+.solution-section h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.solution-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.solution-section ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.solution-section ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.solution-section ul li strong {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.solution-section ul li ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.solution-section ul li ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .solution-card {
+        background: var(--dark-card-bg);
+    }
+
+    .solution-header {
+        background: var(--dark-bg-secondary);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 } 

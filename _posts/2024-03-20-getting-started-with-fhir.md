@@ -139,5 +139,3 @@ Remember to:
 5. Monitor performance
 
 For more information, check out the [official FHIR documentation](https://www.hl7.org/fhir/).
-
-*Context added by Giga fhir-data-models* 

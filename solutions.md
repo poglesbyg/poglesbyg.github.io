@@ -7,289 +7,281 @@ layout: default
 
 ## Healthcare Integration Solutions
 
-### FHIR Implementation
-- **Patient Data Management**
-  - FHIR-compliant patient records
-  - Secure data exchange
-  - Interoperability standards
-  - Audit logging
-  - Consent management
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-hospital"></i>
+            <h3>FHIR Implementation</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Patient Data Management</h4>
+                <ul>
+                    <li>FHIR-compliant patient records</li>
+                    <li>Secure data exchange</li>
+                    <li>Interoperability standards</li>
+                    <li>Audit logging</li>
+                    <li>Consent management</li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Clinical Workflows</h4>
+                <ul>
+                    <li>Medication management</li>
+                    <li>Care coordination</li>
+                    <li>Clinical decision support</li>
+                    <li>Telehealth integration</li>
+                    <li>Remote monitoring</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-- **Clinical Workflows**
-  - Medication management
-  - Care coordination
-  - Clinical decision support
-  - Telehealth integration
-  - Remote monitoring
-
-### Healthcare Analytics
-- **Data Visualization**
-  - Real-time dashboards
-  - Predictive analytics
-  - Population health insights
-  - Quality metrics
-  - Performance indicators
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-chart-line"></i>
+            <h3>Healthcare Analytics</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Data Visualization</h4>
+                <ul>
+                    <li>Real-time dashboards</li>
+                    <li>Predictive analytics</li>
+                    <li>Population health insights</li>
+                    <li>Quality metrics</li>
+                    <li>Performance indicators</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Linux Enterprise Solutions
 
-### System Management
-- **Server Solutions**
-  - High-availability clusters
-    - Pacemaker/Corosync
-    - DRBD replication
-    - Shared storage solutions
-  - Load balancing
-    - LVS (Linux Virtual Server)
-    - HAProxy with keepalived
-    - Nginx Plus
-  - Disaster recovery
-    - Automated failover
-    - Data replication
-    - Backup verification
-  - Backup solutions
-    - Bacula
-    - Amanda
-    - Custom backup scripts
-  - System monitoring
-    - Zabbix with custom templates
-    - Prometheus with Grafana
-    - ELK stack for logs
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-server"></i>
+            <h3>System Management</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Server Solutions</h4>
+                <ul>
+                    <li>
+                        <strong>High-availability clusters</strong>
+                        <ul>
+                            <li>Pacemaker/Corosync</li>
+                            <li>DRBD replication</li>
+                            <li>Shared storage solutions</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Load balancing</strong>
+                        <ul>
+                            <li>LVS (Linux Virtual Server)</li>
+                            <li>HAProxy with keepalived</li>
+                            <li>Nginx Plus</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Disaster recovery</strong>
+                        <ul>
+                            <li>Automated failover</li>
+                            <li>Data replication</li>
+                            <li>Backup verification</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Security Solutions</h4>
+                <ul>
+                    <li>
+                        <strong>SELinux/AppArmor</strong>
+                        <ul>
+                            <li>Custom policy development</li>
+                            <li>Profile management</li>
+                            <li>Security contexts</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Intrusion detection</strong>
+                        <ul>
+                            <li>OSSEC</li>
+                            <li>Snort</li>
+                            <li>Suricata</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-- **Security Solutions**
-  - SELinux/AppArmor
-    - Custom policy development
-    - Profile management
-    - Security contexts
-  - Intrusion detection
-    - OSSEC
-    - Snort
-    - Suricata
-  - Vulnerability scanning
-    - OpenVAS
-    - Lynis
-    - Custom security scripts
-  - Security compliance
-    - CIS benchmarks
-    - STIG compliance
-    - Custom security policies
-  - Access control
-    - FreeIPA
-    - SSSD
-    - PAM configuration
-
-### Automation Solutions
-- **Infrastructure Automation**
-  - Configuration management
-    - Ansible playbooks
-    - Puppet manifests
-    - SaltStack states
-  - Deployment automation
-    - Custom deployment scripts
-    - CI/CD pipelines
-    - Container orchestration
-  - Continuous integration
-    - Jenkins pipelines
-    - GitLab CI
-    - GitHub Actions
-  - Testing automation
-    - Robot Framework
-    - Selenium
-    - Custom test suites
-  - Monitoring automation
-    - Custom monitoring scripts
-    - Alert automation
-    - Report generation
-
-- **Custom Tools Development**
-  - System administration tools
-    - Custom CLI utilities
-    - Web-based dashboards
-    - Monitoring tools
-  - Monitoring solutions
-    - Custom metrics collection
-    - Alert management
-    - Performance analysis
-  - Performance analysis tools
-    - Custom profiling tools
-    - Resource monitoring
-    - Bottleneck detection
-  - Security tools
-    - Custom security scanners
-    - Compliance checkers
-    - Audit tools
-  - DevOps utilities
-    - Deployment helpers
-    - Configuration validators
-    - Environment managers
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-robot"></i>
+            <h3>Automation Solutions</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Infrastructure Automation</h4>
+                <ul>
+                    <li>
+                        <strong>Configuration management</strong>
+                        <ul>
+                            <li>Ansible playbooks</li>
+                            <li>Puppet manifests</li>
+                            <li>SaltStack states</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Deployment automation</strong>
+                        <ul>
+                            <li>Custom deployment scripts</li>
+                            <li>CI/CD pipelines</li>
+                            <li>Container orchestration</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Enterprise Integration
 
-### API Management
-- **Gateway Solutions**
-  - API lifecycle management
-  - Rate limiting
-  - Security policies
-  - Documentation
-  - Developer portal
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-plug"></i>
+            <h3>API Management</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Gateway Solutions</h4>
+                <ul>
+                    <li>API lifecycle management</li>
+                    <li>Rate limiting</li>
+                    <li>Security policies</li>
+                    <li>Documentation</li>
+                    <li>Developer portal</li>
+                </ul>
+            </div>
+            <div class="solution-section">
+                <h4>Integration Patterns</h4>
+                <ul>
+                    <li>Service mesh</li>
+                    <li>Event-driven architecture</li>
+                    <li>Message queuing</li>
+                    <li>Data transformation</li>
+                    <li>Protocol translation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-- **Integration Patterns**
-  - Service mesh
-  - Event-driven architecture
-  - Message queuing
-  - Data transformation
-  - Protocol translation
-
-### Data Integration
-- **ETL Solutions**
-  - Data pipelines
-  - Real-time processing
-  - Data quality
-  - Schema evolution
-  - Metadata management
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-database"></i>
+            <h3>Data Integration</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>ETL Solutions</h4>
+                <ul>
+                    <li>Data pipelines</li>
+                    <li>Real-time processing</li>
+                    <li>Data quality</li>
+                    <li>Schema evolution</li>
+                    <li>Metadata management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Cloud Solutions
 
-### Infrastructure
-- **Multi-Cloud Strategy**
-  - Cloud migration
-  - Hybrid cloud
-  - Cloud optimization
-  - Cost management
-  - Resource scaling
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-cloud"></i>
+            <h3>Infrastructure</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Multi-Cloud Strategy</h4>
+                <ul>
+                    <li>Cloud migration</li>
+                    <li>Hybrid cloud</li>
+                    <li>Cloud optimization</li>
+                    <li>Cost management</li>
+                    <li>Resource scaling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-- **DevOps Automation**
-  - CI/CD pipelines
-  - Infrastructure as Code
-  - Automated testing
-  - Monitoring
-  - Incident response
-
-### Security Solutions
-- **Identity Management**
-  - Single Sign-On
-  - Multi-factor authentication
-  - Role-based access
-  - Audit logging
-  - Compliance reporting
-
-## Linux Performance Solutions
-
-### System Optimization
-- **Performance Tuning**
-  - Kernel optimization
-    - Custom kernel builds
-    - Module optimization
-    - Parameter tuning
-  - Resource management
-    - cgroups configuration
-    - CPU scheduling
-    - Memory management
-  - Network optimization
-    - TCP/IP tuning
-    - Network stack optimization
-    - Interface configuration
-  - Storage optimization
-    - Filesystem tuning
-    - I/O scheduling
-    - RAID configuration
-  - Application tuning
-    - JVM optimization
-    - Database tuning
-    - Web server configuration
-
-- **Monitoring & Analytics**
-  - System metrics
-    - Custom metric collection
-    - Performance baselines
-    - Trend analysis
-  - Performance analysis
-    - Bottleneck identification
-    - Resource utilization
-    - Capacity planning
-  - Capacity planning
-    - Growth forecasting
-    - Resource allocation
-    - Scaling strategies
-  - Trend analysis
-    - Usage patterns
-    - Performance trends
-    - Predictive analytics
-  - Alert management
-    - Custom alert rules
-    - Escalation policies
-    - Incident response
-
-### High-Performance Computing
-- **Cluster Solutions**
-  - HPC cluster setup
-    - Slurm workload manager
-    - OpenMPI configuration
-    - InfiniBand networking
-  - Job scheduling
-    - Custom scheduling policies
-    - Resource allocation
-    - Priority management
-  - Resource management
-    - Node management
-    - Storage allocation
-    - Network configuration
-  - Parallel processing
-    - MPI implementation
-    - OpenMP optimization
-    - GPU acceleration
-  - Scientific computing
-    - Custom scientific tools
-    - Data analysis pipelines
-    - Visualization solutions
-
-## Digital Transformation
-
-### Modernization
-- **Legacy System Integration**
-  - API modernization
-  - Data migration
-  - Process automation
-  - User experience
-  - Mobile enablement
-
-- **Digital Services**
-  - Customer portals
-  - Self-service
-  - Mobile applications
-  - Omnichannel
-  - Analytics
-
-## Industry Solutions
-
-### Financial Services
-- **Banking Solutions**
-  - Payment processing
-  - Risk management
-  - Compliance
-  - Customer experience
-  - Digital banking
-
-### Manufacturing
-- **Industry 4.0**
-  - IoT integration
-  - Predictive maintenance
-  - Supply chain
-  - Quality control
-  - Asset management
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Security Solutions</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Identity Management</h4>
+                <ul>
+                    <li>Single Sign-On</li>
+                    <li>Multi-factor authentication</li>
+                    <li>Role-based access</li>
+                    <li>Audit logging</li>
+                    <li>Compliance reporting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Innovation Lab
 
-### Emerging Technologies
-- **AI/ML Solutions**
-  - Predictive analytics
-  - Natural language processing
-  - Computer vision
-  - Recommendation engines
-  - Process automation
+<div class="solutions-grid">
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-brain"></i>
+            <h3>AI/ML Solutions</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Emerging Technologies</h4>
+                <ul>
+                    <li>Predictive analytics</li>
+                    <li>Natural language processing</li>
+                    <li>Computer vision</li>
+                    <li>Recommendation engines</li>
+                    <li>Process automation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-- **Blockchain**
-  - Smart contracts
-  - Supply chain
-  - Identity management
-  - Asset tracking
-  - Decentralized applications 
+    <div class="solution-card">
+        <div class="solution-header">
+            <i class="fas fa-link"></i>
+            <h3>Blockchain</h3>
+        </div>
+        <div class="solution-content">
+            <div class="solution-section">
+                <h4>Applications</h4>
+                <ul>
+                    <li>Smart contracts</li>
+                    <li>Supply chain</li>
+                    <li>Identity management</li>
+                    <li>Asset tracking</li>
+                    <li>Decentralized applications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
