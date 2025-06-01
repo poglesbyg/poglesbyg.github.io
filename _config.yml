@@ -1,6 +1,43 @@
 theme: jekyll-theme-minimal
-title: Paul Greenwood - Software Developer
-description: Software developer specializing in web development and full-stack applications. Check out my projects and get in touch!
+title: Paul Greenwood
+description: Healthcare Technology Specialist & Enterprise Solutions Architect with MPS in Biomedical Health Informatics from UNC Chapel Hill
+baseurl: ""
+url: "https://poglesbyg.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .cursor
+  - .giga
 
 lsi: false
 safe: true
