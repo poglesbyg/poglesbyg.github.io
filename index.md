@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="hero">
-    <h1>Paul Greenwood</h1>
+    <h1>Paul Greenwood, MPS</h1>
     <p class="hero-subtitle">Agentic AI Senior Software Engineer & ML Systems Architect</p>
     <p class="hero-description">Specializing in Large Language Models, AI Systems Architecture, and Intelligent Automation</p>
 </div>
