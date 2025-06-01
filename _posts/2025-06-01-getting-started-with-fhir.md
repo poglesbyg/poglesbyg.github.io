@@ -1,12 +1,10 @@
 ---
 title: Getting Started with FHIR Implementation
-date: 2024-03-20
+date: 2025-06-01
 category: Healthcare
 tags: [FHIR, Healthcare, Integration, API]
 excerpt: A comprehensive guide to implementing FHIR standards in healthcare systems, covering key concepts, best practices, and practical examples.
 ---
-
-# Getting Started with FHIR Implementation
 
 FHIR (Fast Healthcare Interoperability Resources) has become the standard for healthcare data exchange. This guide will help you understand the key components and best practices for implementing FHIR in your healthcare systems.
 
