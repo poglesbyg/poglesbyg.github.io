@@ -10,21 +10,18 @@ layout: default
         <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <p>Get in touch via email</p>
             <a href="mailto:pogrant@alumni.unc.edu" class="contact-link">pogrant@alumni.unc.edu</a>
         </div>
 
         <div class="contact-card">
             <i class="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
-            <p>Connect on LinkedIn</p>
             <a href="https://linkedin.com/in/poglesbyg" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/poglesbyg</a>
         </div>
 
         <div class="contact-card">
             <i class="fab fa-github"></i>
             <h3>GitHub</h3>
-            <p>Check out my projects</p>
             <a href="https://github.com/poglesbyg" class="contact-link" target="_blank" rel="noopener noreferrer">github.com/poglesbyg</a>
         </div>
     </div>
@@ -40,11 +37,6 @@ layout: default
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
             </div>
 
             <div class="form-group">

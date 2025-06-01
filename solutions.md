@@ -6,10 +6,10 @@ layout: default
 # Enterprise Solutions
 
 <div class="solutions-intro">
-    <p>Comprehensive enterprise solutions designed to drive digital transformation and operational excellence across healthcare, Linux infrastructure, and cloud environments.</p>
+    <p>Enterprise solutions for healthcare integration, Linux infrastructure, and cloud environments, backed by a Master's degree in Biomedical Health Informatics.</p>
 </div>
 
-## Healthcare Integration Solutions
+## Healthcare Integration
 
 <div class="solutions-grid">
     <div class="solution-card">
@@ -19,26 +19,15 @@ layout: default
         </div>
         <div class="solution-content">
             <div class="solution-description">
-                <p>End-to-end FHIR implementation services ensuring seamless healthcare data exchange and interoperability.</p>
+                <p>End-to-end FHIR implementation for healthcare data exchange.</p>
             </div>
             <div class="solution-section">
-                <h4>Patient Data Management</h4>
+                <h4>Key Features</h4>
                 <ul>
                     <li>FHIR-compliant patient records</li>
                     <li>Secure data exchange</li>
-                    <li>Interoperability standards</li>
-                    <li>Audit logging</li>
-                    <li>Consent management</li>
-                </ul>
-            </div>
-            <div class="solution-section">
-                <h4>Clinical Workflows</h4>
-                <ul>
-                    <li>Medication management</li>
-                    <li>Care coordination</li>
-                    <li>Clinical decision support</li>
+                    <li>Clinical workflows</li>
                     <li>Telehealth integration</li>
-                    <li>Remote monitoring</li>
                 </ul>
             </div>
             <div class="solution-footer">
@@ -54,16 +43,15 @@ layout: default
         </div>
         <div class="solution-content">
             <div class="solution-description">
-                <p>Advanced analytics solutions for healthcare data visualization and insights.</p>
+                <p>Advanced analytics for healthcare data insights.</p>
             </div>
             <div class="solution-section">
-                <h4>Data Visualization</h4>
+                <h4>Key Features</h4>
                 <ul>
                     <li>Real-time dashboards</li>
                     <li>Predictive analytics</li>
                     <li>Population health insights</li>
                     <li>Quality metrics</li>
-                    <li>Performance indicators</li>
                 </ul>
             </div>
             <div class="solution-footer">
@@ -73,7 +61,7 @@ layout: default
     </div>
 </div>
 
-## Linux Enterprise Solutions
+## Linux Infrastructure
 
 <div class="solutions-grid">
     <div class="solution-card">
@@ -83,56 +71,15 @@ layout: default
         </div>
         <div class="solution-content">
             <div class="solution-description">
-                <p>Comprehensive Linux system management solutions for enterprise infrastructure.</p>
+                <p>Enterprise Linux infrastructure management.</p>
             </div>
             <div class="solution-section">
-                <h4>Server Solutions</h4>
+                <h4>Key Features</h4>
                 <ul>
-                    <li>
-                        <strong>High-availability clusters</strong>
-                        <ul>
-                            <li>Pacemaker/Corosync</li>
-                            <li>DRBD replication</li>
-                            <li>Shared storage solutions</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Load balancing</strong>
-                        <ul>
-                            <li>LVS (Linux Virtual Server)</li>
-                            <li>HAProxy with keepalived</li>
-                            <li>Nginx Plus</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Disaster recovery</strong>
-                        <ul>
-                            <li>Automated failover</li>
-                            <li>Data replication</li>
-                            <li>Backup verification</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="solution-section">
-                <h4>Security Solutions</h4>
-                <ul>
-                    <li>
-                        <strong>SELinux/AppArmor</strong>
-                        <ul>
-                            <li>Custom policy development</li>
-                            <li>Profile management</li>
-                            <li>Security contexts</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Intrusion detection</strong>
-                        <ul>
-                            <li>OSSEC</li>
-                            <li>Snort</li>
-                            <li>Suricata</li>
-                        </ul>
-                    </li>
+                    <li>High-availability clusters</li>
+                    <li>Load balancing</li>
+                    <li>Disaster recovery</li>
+                    <li>Security solutions</li>
                 </ul>
             </div>
             <div class="solution-footer">
@@ -144,31 +91,19 @@ layout: default
     <div class="solution-card">
         <div class="solution-header">
             <i class="fas fa-robot"></i>
-            <h3>Automation Solutions</h3>
+            <h3>Automation</h3>
         </div>
         <div class="solution-content">
             <div class="solution-description">
-                <p>Enterprise-grade automation solutions for infrastructure and deployment.</p>
+                <p>Infrastructure and deployment automation.</p>
             </div>
             <div class="solution-section">
-                <h4>Infrastructure Automation</h4>
+                <h4>Key Features</h4>
                 <ul>
-                    <li>
-                        <strong>Configuration management</strong>
-                        <ul>
-                            <li>Ansible playbooks</li>
-                            <li>Puppet manifests</li>
-                            <li>SaltStack states</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Deployment automation</strong>
-                        <ul>
-                            <li>Custom deployment scripts</li>
-                            <li>CI/CD pipelines</li>
-                            <li>Container orchestration</li>
-                        </ul>
-                    </li>
+                    <li>Configuration management</li>
+                    <li>Deployment automation</li>
+                    <li>CI/CD pipelines</li>
+                    <li>Container orchestration</li>
                 </ul>
             </div>
             <div class="solution-footer">
@@ -188,55 +123,19 @@ layout: default
         </div>
         <div class="solution-content">
             <div class="solution-description">
-                <p>Comprehensive API management and integration solutions for enterprise systems.</p>
+                <p>Enterprise API management and integration.</p>
             </div>
             <div class="solution-section">
-                <h4>Gateway Solutions</h4>
+                <h4>Key Features</h4>
                 <ul>
                     <li>API lifecycle management</li>
-                    <li>Rate limiting</li>
                     <li>Security policies</li>
-                    <li>Documentation</li>
                     <li>Developer portal</li>
-                </ul>
-            </div>
-            <div class="solution-section">
-                <h4>Integration Patterns</h4>
-                <ul>
-                    <li>Service mesh</li>
-                    <li>Event-driven architecture</li>
-                    <li>Message queuing</li>
-                    <li>Data transformation</li>
-                    <li>Protocol translation</li>
+                    <li>Integration services</li>
                 </ul>
             </div>
             <div class="solution-footer">
                 <a href="/contact" class="solution-cta">Learn More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="solution-card">
-        <div class="solution-header">
-            <i class="fas fa-database"></i>
-            <h3>Data Integration</h3>
-        </div>
-        <div class="solution-content">
-            <div class="solution-description">
-                <p>Robust data integration solutions for enterprise data management.</p>
-            </div>
-            <div class="solution-section">
-                <h4>ETL Solutions</h4>
-                <ul>
-                    <li>Data pipelines</li>
-                    <li>Real-time processing</li>
-                    <li>Data quality</li>
-                    <li>Schema evolution</li>
-                    <li>Metadata management</li>
-                </ul>
-            </div>
-            <div class="solution-footer">
-                <a href="/contact" class="solution-cta">Request Demo</a>
             </div>
         </div>
     </div>

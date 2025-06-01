@@ -3,23 +3,19 @@ title: Architecture
 layout: default
 ---
 
-# System Architecture & Design Patterns
+# System Architecture
 
-## Enterprise Architecture Overview
+Enterprise architecture focused on scalable, maintainable, and secure systems, developed through advanced education and practical experience.
 
-Enterprise architecture is the foundation of scalable, maintainable, and secure systems. My approach combines industry best practices with practical experience to deliver robust solutions.
-
-### Core Architectural Principles
+## Core Principles
 
 <div class="architecture-grid">
     <div class="architecture-card">
         <i class="fas fa-cubes"></i>
         <h3>Modular Design</h3>
-        <p>Building systems with independent, reusable components that can be developed, tested, and deployed separately. This approach enables:</p>
         <ul>
-            <li>Independent scaling of components</li>
-            <li>Easier maintenance and updates</li>
-            <li>Better code organization</li>
+            <li>Independent components</li>
+            <li>Easy maintenance</li>
             <li>Simplified testing</li>
         </ul>
     </div>
@@ -27,60 +23,39 @@ Enterprise architecture is the foundation of scalable, maintainable, and secure 
     <div class="architecture-card">
         <i class="fas fa-expand-arrows-alt"></i>
         <h3>Scalability</h3>
-        <p>Designing systems that can handle growing workloads through both horizontal and vertical scaling:</p>
         <ul>
-            <li>Horizontal scaling with load balancing</li>
-            <li>Vertical scaling for resource-intensive tasks</li>
-            <li>Auto-scaling capabilities</li>
-            <li>Performance optimization</li>
+            <li>Horizontal scaling</li>
+            <li>Vertical scaling</li>
+            <li>Auto-scaling</li>
         </ul>
     </div>
 
     <div class="architecture-card">
         <i class="fas fa-shield-alt"></i>
         <h3>Security</h3>
-        <p>Implementing a defense-in-depth approach to protect systems and data:</p>
         <ul>
             <li>Multiple security layers</li>
-            <li>Regular security audits</li>
-            <li>Compliance with standards</li>
-            <li>Proactive threat detection</li>
-        </ul>
-    </div>
-
-    <div class="architecture-card">
-        <i class="fas fa-tools"></i>
-        <h3>Maintainability</h3>
-        <p>Creating systems that are easy to maintain and update:</p>
-        <ul>
-            <li>Clear code organization</li>
-            <li>Comprehensive documentation</li>
-            <li>Automated testing</li>
-            <li>Monitoring and logging</li>
+            <li>Regular audits</li>
+            <li>Compliance standards</li>
         </ul>
     </div>
 
     <div class="architecture-card">
         <i class="fas fa-plug"></i>
         <h3>Interoperability</h3>
-        <p>Ensuring systems can work together seamlessly:</p>
         <ul>
-            <li>Standard protocols and formats</li>
+            <li>Standard protocols</li>
             <li>API-first design</li>
-            <li>Data exchange standards</li>
             <li>Integration patterns</li>
         </ul>
     </div>
 </div>
 
-### Technology Stack
-
-Our technology stack is carefully chosen to provide the best balance of performance, reliability, and maintainability:
+## Technology Stack
 
 <div class="tech-stack-grid">
     <div class="tech-stack-card">
         <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-        <p>React with TypeScript and Material-UI for building responsive, maintainable user interfaces.</p>
         <div class="tech-tags">
             <span class="tech-tag">React</span>
             <span class="tech-tag">TypeScript</span>
@@ -90,17 +65,16 @@ Our technology stack is carefully chosen to provide the best balance of performa
 
     <div class="tech-stack-card">
         <h3><i class="fas fa-server"></i> Backend</h3>
-        <p>Node.js and Express with TypeScript for scalable, high-performance APIs.</p>
         <div class="tech-tags">
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">Express</span>
             <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Rust</span>
         </div>
     </div>
 
     <div class="tech-stack-card">
         <h3><i class="fas fa-database"></i> Database</h3>
-        <p>PostgreSQL for relational data and Redis for caching and real-time features.</p>
         <div class="tech-tags">
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">Redis</span>
@@ -109,44 +83,21 @@ Our technology stack is carefully chosen to provide the best balance of performa
 
     <div class="tech-stack-card">
         <h3><i class="fas fa-cogs"></i> DevOps</h3>
-        <p>Docker and Kubernetes for containerization and orchestration.</p>
         <div class="tech-tags">
             <span class="tech-tag">Docker</span>
             <span class="tech-tag">Kubernetes</span>
             <span class="tech-tag">GitHub Actions</span>
         </div>
     </div>
-
-    <div class="tech-stack-card">
-        <h3><i class="fas fa-chart-line"></i> Monitoring</h3>
-        <p>Prometheus and Grafana for comprehensive system monitoring.</p>
-        <div class="tech-tags">
-            <span class="tech-tag">Prometheus</span>
-            <span class="tech-tag">Grafana</span>
-        </div>
-    </div>
-
-    <div class="tech-stack-card">
-        <h3><i class="fas fa-desktop"></i> Operating System</h3>
-        <p>Enterprise-grade Linux distributions for different use cases.</p>
-        <div class="tech-tags">
-            <span class="tech-tag">RHEL 8/9</span>
-            <span class="tech-tag">Ubuntu LTS</span>
-            <span class="tech-tag">Alpine Linux</span>
-        </div>
-    </div>
 </div>
 
-## System Design Patterns
+## Design Patterns
 
-### Microservices Architecture
-
-Microservices architecture breaks down applications into small, independent services that can be developed, deployed, and scaled separately.
+### Microservices
 
 <div class="pattern-grid">
     <div class="pattern-card">
         <h3>Service Boundaries</h3>
-        <p>Defining clear boundaries between services based on business domains and functionality.</p>
         <ul>
             <li>Domain-driven design</li>
             <li>Bounded contexts</li>
@@ -155,8 +106,7 @@ Microservices architecture breaks down applications into small, independent serv
     </div>
 
     <div class="pattern-card">
-        <h3>Event-Driven Communication</h3>
-        <p>Using events for asynchronous communication between services.</p>
+        <h3>Event-Driven</h3>
         <ul>
             <li>Message queues</li>
             <li>Event sourcing</li>
@@ -166,7 +116,6 @@ Microservices architecture breaks down applications into small, independent serv
 
     <div class="pattern-card">
         <h3>API Gateway</h3>
-        <p>Centralizing API management and routing.</p>
         <ul>
             <li>Request routing</li>
             <li>Load balancing</li>
@@ -177,12 +126,9 @@ Microservices architecture breaks down applications into small, independent serv
 
 ### Data Architecture
 
-Our data architecture ensures efficient data management and access patterns.
-
 <div class="pattern-grid">
     <div class="pattern-card">
         <h3>Event Sourcing</h3>
-        <p>Storing all changes to application state as a sequence of events.</p>
         <ul>
             <li>Audit trails</li>
             <li>State reconstruction</li>
@@ -192,57 +138,10 @@ Our data architecture ensures efficient data management and access patterns.
 
     <div class="pattern-card">
         <h3>CQRS</h3>
-        <p>Separating read and write operations for better scalability.</p>
         <ul>
             <li>Optimized queries</li>
             <li>Scalable writes</li>
             <li>Data consistency</li>
-        </ul>
-    </div>
-
-    <div class="pattern-card">
-        <h3>Data Partitioning</h3>
-        <p>Distributing data across multiple storage systems.</p>
-        <ul>
-            <li>Horizontal partitioning</li>
-            <li>Vertical partitioning</li>
-            <li>Sharding strategies</li>
-        </ul>
-    </div>
-</div>
-
-### Security Architecture
-
-Security is built into every layer of our architecture.
-
-<div class="pattern-grid">
-    <div class="pattern-card">
-        <h3>Authentication & Authorization</h3>
-        <p>Implementing robust identity and access management.</p>
-        <ul>
-            <li>OAuth2/OpenID Connect</li>
-            <li>JWT tokens</li>
-            <li>Role-based access</li>
-        </ul>
-    </div>
-
-    <div class="pattern-card">
-        <h3>API Security</h3>
-        <p>Protecting APIs from unauthorized access and attacks.</p>
-        <ul>
-            <li>Rate limiting</li>
-            <li>Input validation</li>
-            <li>API keys</li>
-        </ul>
-    </div>
-
-    <div class="pattern-card">
-        <h3>Data Protection</h3>
-        <p>Ensuring data security at rest and in transit.</p>
-        <ul>
-            <li>Encryption</li>
-            <li>Secure storage</li>
-            <li>Data masking</li>
         </ul>
     </div>
 </div>

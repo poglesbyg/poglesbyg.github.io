@@ -5,8 +5,8 @@ title: Home
 
 <div class="hero">
     <h1>Paul Greenwood</h1>
-    <p class="hero-subtitle">MPS in Biomedical Health Informatics - University of North Carolina at Chapel Hill</p>
-    <p class="hero-description">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
+    <p class="hero-subtitle">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
+    <p class="hero-description">MPS in Biomedical Health Informatics, UNC Chapel Hill</p>
 </div>
 
 <div class="education-section">
@@ -27,32 +27,29 @@ title: Home
 </div>
 
 <div class="expertise">
-    <h2>Areas of Expertise</h2>
+    <h2>Core Competencies</h2>
     <div class="expertise-grid">
         <div class="expertise-card">
-            <h3>Healthcare Integration</h3>
+            <h3>Healthcare Technology</h3>
             <ul>
-                <li>FHIR Implementation</li>
-                <li>Healthcare Data Management</li>
-                <li>Clinical Systems Integration</li>
+                <li>FHIR Implementation & Integration</li>
+                <li>Clinical Systems Architecture</li>
                 <li>Health Information Exchange</li>
             </ul>
         </div>
         <div class="expertise-card">
             <h3>Enterprise Solutions</h3>
             <ul>
-                <li>System Architecture</li>
-                <li>Cloud Infrastructure</li>
-                <li>Security & Compliance</li>
+                <li>System Architecture & Design</li>
+                <li>Cloud Infrastructure & Security</li>
                 <li>Performance Optimization</li>
             </ul>
         </div>
         <div class="expertise-card">
-            <h3>Data Science</h3>
+            <h3>Data & Analytics</h3>
             <ul>
-                <li>Healthcare Analytics</li>
-                <li>Machine Learning</li>
-                <li>Data Engineering</li>
+                <li>Healthcare Data Management</li>
+                <li>Machine Learning & Analytics</li>
                 <li>Research & Development</li>
             </ul>
         </div>
