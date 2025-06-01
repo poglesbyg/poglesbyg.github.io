@@ -11,19 +11,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
-
 # Defaults
 defaults:
   - scope:
-      path: ""
+      path: "_posts"
       type: "posts"
     values:
       layout: "post"
+      permalink: /blog/:year/:month/:day/:title/
   - scope:
       path: ""
     values:

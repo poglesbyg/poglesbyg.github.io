@@ -189,60 +189,52 @@
                 padding-left: 2rem;
             }
         }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .theme-toggle {
+                margin: 0.5rem 0;
+                width: 100%;
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="nav-container">
         <div class="nav-content">
             <a href="/" class="nav-logo">Paul Greenwood</a>
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/projects" class="nav-link">Projects</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="nav-links" id="navLinks">
-                <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">
-                    <i class="fas fa-home"></i> Home
-                </a>
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-heartbeat"></i> Healthcare
-                        <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 0.5rem;"></i>
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="/solutions">
-                            <i class="fas fa-puzzle-piece"></i> Solutions
-                        </a>
-                        <a href="/competencies">
-                            <i class="fas fa-tools"></i> Competencies
-                        </a>
-                        <a href="/architecture">
-                            <i class="fas fa-sitemap"></i> Architecture
-                        </a>
-                    </div>
-                </div>
-                <a href="/blog" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">
-                    <i class="fas fa-blog"></i> Blog
-                </a>
-                <a href="/contact" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-external-link-alt"></i> Connect
-                        <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 0.5rem;"></i>
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="https://github.com/poglesbyg" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/poglesbyg/" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:pogrant@alumni.unc.edu">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </nav>
 
@@ -282,30 +274,36 @@
 
     <script>
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                navLinks.classList.remove('active');
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+
+                // Handle dropdown menus on mobile
+                const dropdowns = document.querySelectorAll('.nav-dropdown');
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (link) {
+                        link.addEventListener('click', (e) => {
+                            if (window.innerWidth <= 768) {
+                                e.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
             }
-        });
-
-        // Handle dropdown menus on mobile
-        const dropdowns = document.querySelectorAll('.nav-dropdown');
-        dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('.nav-link');
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                }
-            });
         });
     </script>
 </body>

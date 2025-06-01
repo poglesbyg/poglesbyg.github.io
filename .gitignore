@@ -2,7 +2,9 @@
 .cursor/rules/authentication-flow.mdc
 .cursor/rules/data-flow-operations.mdc
 .cursor/rules/fhir-data-models.mdc
+.giga
 .giga/specifications.json
+.cursor
 
 # Jekyll build output
 _site/
@@ -11,10 +13,41 @@ _site/
 .jekyll-metadata
 
 # Ruby dependencies
-vendor/
 .bundle/
+vendor/
+Gemfile.lock
 
-# OS generated files
+# Node dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# System Files
 .DS_Store
 .DS_Store?
 ._*
@@ -23,17 +56,13 @@ vendor/
 ehthumbs.db
 Thumbs.db
 
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-*.swo
+# Backup files
+*.bak
+*.backup
 *~
 
-# Environment files
-.env
-.env.local
-.env.*.local
+# Local development
+*.local
+local.*
 
-# Log files
-*.log
+_config-DESKTOP-08NVQTI.yml

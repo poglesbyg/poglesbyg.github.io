@@ -168,36 +168,48 @@ const Theme = {
         this.currentTheme = localStorage.getItem('theme') ||
             (this.prefersDarkScheme.matches ? 'dark' : 'light');
 
-        this.setInitialTheme();
-        this.bindEvents();
+        if (this.themeToggle) {
+            this.setInitialTheme();
+            this.bindEvents();
+        }
     },
 
     setInitialTheme() {
-        document.documentElement.setAttribute('data-theme', this.currentTheme);
+        document.documentElement.classList.remove('light-theme', 'dark-theme');
+        document.documentElement.classList.add(`${this.currentTheme}-theme`);
         this.updateThemeIcon(this.currentTheme);
     },
 
     bindEvents() {
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
-        this.prefersDarkScheme.addEventListener('change', (e) => this.handleSystemThemeChange(e));
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+            this.prefersDarkScheme.addEventListener('change', (e) => this.handleSystemThemeChange(e));
+        }
     },
 
     toggleTheme() {
-        const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
+        const currentTheme = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        document.documentElement.classList.remove(`${currentTheme}-theme`);
+        document.documentElement.classList.add(`${newTheme}-theme`);
+
         localStorage.setItem('theme', newTheme);
         this.updateThemeIcon(newTheme);
     },
 
     updateThemeIcon(theme) {
         const icon = this.themeToggle.querySelector('i');
-        icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        if (icon) {
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
     },
 
     handleSystemThemeChange(e) {
         if (!localStorage.getItem('theme')) {
             const newTheme = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
+            document.documentElement.classList.remove('light-theme', 'dark-theme');
+            document.documentElement.classList.add(`${newTheme}-theme`);
             this.updateThemeIcon(newTheme);
         }
     }
