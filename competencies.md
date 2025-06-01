@@ -96,4 +96,13 @@ Enterprise solutions engineering with a Master's degree in Biomedical Health Inf
             <span class="tech-tag">CI/CD</span>
         </div>
     </div>
+
+    <div class="tech-category">
+        <h3><i class="fas fa-robot"></i> AI & ML</h3>
+        <div class="tech-tags">
+            <span class="tech-tag">Prompt Engineering</span>
+            <span class="tech-tag">LLM Integration</span>
+            <span class="tech-tag">AI Development</span>
+        </div>
+    </div>
 </div> 

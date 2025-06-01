@@ -33,6 +33,10 @@ title: Paul Greenwood - Software Developer
         <h3><i class="fas fa-plug"></i> API Development</h3>
         <p>Creating RESTful APIs and integrating third-party services.</p>
     </div>
+    <div class="skill-card">
+        <h3><i class="fas fa-robot"></i> AI & Prompt Engineering</h3>
+        <p>Expert in LLM integration, prompt design, and AI development.</p>
+    </div>
 </section>
 
 <section id="projects" class="projects">
