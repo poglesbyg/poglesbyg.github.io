@@ -565,11 +565,18 @@ a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.hero p {
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-description {
     font-size: 1.25rem;
     color: var(--text-light);
     max-width: 600px;
-    margin: 0 auto;
+    margin: 1rem auto 0;
 }
 
 /* Skills Section */
@@ -2023,5 +2030,133 @@ a:hover {
         left: 1rem;
         right: 1rem;
         bottom: 1rem;
+    }
+}
+
+/* Education Section */
+.education-section {
+    margin: 4rem 0;
+    padding: 0 1rem;
+}
+
+.education-card {
+    background: var(--card-background);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-header {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.education-header i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.education-header h2 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.education-content {
+    padding: 2rem;
+}
+
+.degree {
+    text-align: center;
+}
+
+.degree h3 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.degree h4 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.institution {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.degree-description {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .education-card {
+        background: var(--dark-card-bg);
+    }
+
+    .education-header {
+        background: var(--dark-bg-secondary);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .education-header {
+        padding: 1.5rem;
+    }
+
+    .education-header i {
+        font-size: 2rem;
+    }
+
+    .education-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .education-content {
+        padding: 1.5rem;
+    }
+
+    .degree h3 {
+        font-size: 1.5rem;
+    }
+
+    .degree h4 {
+        font-size: 1.25rem;
+    }
+
+    .institution {
+        font-size: 1.1rem;
+    }
+
+    .degree-description {
+        font-size: 1rem;
     }
 } 
