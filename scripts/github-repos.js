@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const matchesCategory = category === 'all' ||
                 (category === 'python' && repo.language === 'Python') ||
+                (category === 'rust' && repo.language === 'Rust') ||
                 (repo.topics && repo.topics.includes(category));
 
             return matchesSearch && matchesCategory;
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="project-title">
                         <a href="${repo.html_url}" target="_blank" rel="noopener">${repo.name}</a>
                         ${repo.language === 'Python' ? '<span class="python-badge"><i class="fab fa-python"></i> Python</span>' : ''}
+                        ${repo.language === 'Rust' ? '<span class="rust-badge"><i class="fas fa-cog"></i> Rust</span>' : ''}
                     </h3>
                     <p class="project-description">${repo.description || 'No description available'}</p>
                     <div class="project-meta">
@@ -150,6 +152,14 @@ style.textContent = `
     }
     .python-badge {
         background: #306998;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        margin-left: 0.5rem;
+    }
+    .rust-badge {
+        background: #DEA584;
         color: white;
         padding: 0.25rem 0.75rem;
         border-radius: 20px;
