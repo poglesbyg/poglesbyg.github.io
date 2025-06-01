@@ -274,9 +274,36 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .footer-headshot {
+            display: none; /* Hide on desktop by default */
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .footer-headshot:hover {
+            transform: scale(1.05);
+            border-color: var(--text-color);
         }
 
         .footer-section h3 {
@@ -299,7 +326,8 @@
 
         .footer-role {
             color: var(--text-light);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .footer-education {
@@ -387,28 +415,38 @@
             color: var(--text-light);
         }
 
-        .footer-headshot {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary-color);
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .footer-headshot:hover {
-            transform: scale(1.05);
-            border-color: var(--text-color);
-        }
-
         @media (max-width: 768px) {
             .footer {
                 padding: 3rem 0 1.5rem;
             }
 
             .footer-content {
+                grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .footer-profile {
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-headshot {
+                display: block; /* Show on mobile */
+                margin-bottom: 1rem;
+            }
+
+            .footer-section {
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-education p {
+                justify-content: center;
             }
 
             .footer-bottom {
@@ -426,7 +464,7 @@
     <nav class="nav-container">
         <div class="nav-content">
             <a href="/" class="nav-logo">
-                <img src="{{ site.baseurl }}/assets/images/headshot.jpg" alt="Paul Greenwood" class="headshot">
+                <img src="{{ site.baseurl }}/assets/images/1555515902875.jpeg" alt="Paul Greenwood" class="headshot">
                 Paul Greenwood
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -475,13 +513,15 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <img src="{{ site.baseurl }}/assets/images/headshot.jpg" alt="Paul Greenwood" class="footer-headshot">
-                    <h3>Paul Greenwood</h3>
-                    <p class="footer-role">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
-                    <div class="footer-education">
-                        <p><i class="fas fa-graduation-cap"></i> MPS in Biomedical Health Informatics</p>
-                        <p><i class="fas fa-university"></i> University of North Carolina at Chapel Hill</p>
+                <div class="footer-section footer-profile">
+                    <img src="{{ site.baseurl }}/assets/images/1555515902875.jpeg" alt="Paul Greenwood" class="footer-headshot">
+                    <div>
+                        <h3>Paul Greenwood</h3>
+                        <p class="footer-role">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
+                        <div class="footer-education">
+                            <p><i class="fas fa-graduation-cap"></i> MPS in Biomedical Health Informatics</p>
+                            <p><i class="fas fa-university"></i> University of North Carolina at Chapel Hill</p>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-section">
