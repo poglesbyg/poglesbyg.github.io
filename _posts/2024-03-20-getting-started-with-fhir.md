@@ -1,6 +1,6 @@
 ---
 title: Getting Started with FHIR Implementation
-date: 2025-06-01
+date: 2024-03-20
 category: Healthcare
 tags: [FHIR, Healthcare, Integration, API]
 excerpt: A comprehensive guide to implementing FHIR standards in healthcare systems, covering key concepts, best practices, and practical examples.
