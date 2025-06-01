@@ -5,8 +5,8 @@ title: Home
 
 <div class="hero">
     <h1>Paul Greenwood</h1>
-    <p class="hero-subtitle">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
-    <p class="hero-description">MPS in Biomedical Health Informatics, UNC Chapel Hill</p>
+    <p class="hero-subtitle">Agentic AI Senior Software Engineer & ML Systems Architect</p>
+    <p class="hero-description">Specializing in Large Language Models, AI Systems Architecture, and Intelligent Automation</p>
 </div>
 
 <div class="education-section">
@@ -20,7 +20,7 @@ title: Home
                 <h3>Master of Professional Science (MPS)</h3>
                 <h4>Biomedical Health Informatics</h4>
                 <p class="institution">University of North Carolina at Chapel Hill</p>
-                <p class="degree-description">Specialized in healthcare data management, clinical informatics, and health information systems integration.</p>
+                <p class="degree-description">Specialized in AI/ML systems, data science, and intelligent automation with a focus on healthcare applications.</p>
             </div>
         </div>
     </div>
@@ -30,27 +30,27 @@ title: Home
     <h2>Core Competencies</h2>
     <div class="expertise-grid">
         <div class="expertise-card">
-            <h3>Healthcare Technology</h3>
+            <h3>AI/ML Engineering</h3>
             <ul>
-                <li>FHIR Implementation & Integration</li>
-                <li>Clinical Systems Architecture</li>
-                <li>Health Information Exchange</li>
+                <li>Large Language Model Development</li>
+                <li>Agentic AI Systems Architecture</li>
+                <li>MLOps & Model Deployment</li>
             </ul>
         </div>
         <div class="expertise-card">
-            <h3>Enterprise Solutions</h3>
+            <h3>Intelligent Systems</h3>
             <ul>
-                <li>System Architecture & Design</li>
-                <li>Cloud Infrastructure & Security</li>
+                <li>Autonomous Agent Design</li>
+                <li>AI System Integration</li>
                 <li>Performance Optimization</li>
             </ul>
         </div>
         <div class="expertise-card">
             <h3>Data & Analytics</h3>
             <ul>
-                <li>Healthcare Data Management</li>
-                <li>Machine Learning & Analytics</li>
-                <li>Research & Development</li>
+                <li>Advanced ML Algorithms</li>
+                <li>Deep Learning Systems</li>
+                <li>AI Research & Development</li>
             </ul>
         </div>
     </div>
