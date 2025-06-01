@@ -5,8 +5,7 @@ title: Home
 
 <div class="hero">
     <h1>Paul Greenwood</h1>
-    <p class="hero-subtitle">MPS in Biomedical Health Informatics</p>
-    <p class="hero-subtitle">University of North Carolina at Chapel Hill</p>
+    <p class="hero-subtitle">MPS in Biomedical Health Informatics - University of North Carolina at Chapel Hill</p>
     <p class="hero-description">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
 </div>
 
