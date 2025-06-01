@@ -25,6 +25,7 @@ description: Explore my open source contributions and personal projects on GitHu
                 <select id="categoryFilter">
                     <option value="all">All Categories</option>
                     <option value="python">Python</option>
+                    <option value="rust">Rust</option>
                     <option value="healthcare">Healthcare</option>
                     <option value="enterprise">Enterprise</option>
                     <option value="data-science">Data Science</option>
