@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building My Professional Portfolio: A Journey Through Design and Development"
-date: 2024-03-19
+date: 2025-06-01
 categories: [portfolio, web-development]
 tags: [jekyll, css, responsive-design]
 ---
