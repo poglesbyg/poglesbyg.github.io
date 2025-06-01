@@ -267,6 +267,7 @@ a:hover {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        z-index: var(--z-fixed);
     }
 
     .nav-links {
@@ -284,6 +285,8 @@ a:hover {
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 4px 20px var(--shadow-color);
         z-index: var(--z-fixed);
+        height: calc(100vh - 4rem);
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -293,6 +296,7 @@ a:hover {
     .nav-link {
         width: 100%;
         padding: var(--spacing-md);
+        justify-content: center;
     }
 
     .dropdown-content {

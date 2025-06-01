@@ -6,6 +6,11 @@ const Navigation = {
         this.navContainer = document.querySelector('.nav-container');
         this.dropdowns = document.querySelectorAll('.nav-dropdown');
 
+        if (!this.mobileMenuBtn || !this.navLinksContainer) {
+            console.error('Mobile menu elements not found');
+            return;
+        }
+
         this.bindEvents();
         this.updateActiveLinks();
         this.initScrollBehavior();
@@ -13,24 +18,39 @@ const Navigation = {
 
     bindEvents() {
         // Mobile menu events
-        if (this.mobileMenuBtn && this.navLinksContainer) {
-            this.mobileMenuBtn.addEventListener('click', () => this.toggleMobileMenu());
-            document.addEventListener('click', (e) => this.handleOutsideClick(e));
-        }
+        this.mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleMobileMenu();
+        });
 
-        // Dropdown events
-        this.dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('.nav-link');
-            if (link) {
-                link.addEventListener('click', (e) => this.handleDropdownClick(e, dropdown));
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (this.navLinksContainer.classList.contains('active') &&
+                !this.navLinksContainer.contains(e.target) &&
+                !this.mobileMenuBtn.contains(e.target)) {
+                this.toggleMobileMenu();
             }
         });
 
-        // Window resize
+        // Handle window resize
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => this.handleResize(), 250);
+        });
+
+        // Handle dropdowns
+        this.dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-link');
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
         });
     },
 
@@ -41,31 +61,26 @@ const Navigation = {
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
         }
-    },
 
-    handleOutsideClick(event) {
-        if (this.navLinksContainer &&
-            !this.navLinksContainer.contains(event.target) &&
-            !this.mobileMenuBtn.contains(event.target)) {
-            this.navLinksContainer.classList.remove('active');
-            const icon = this.mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            }
-        }
-
-        if (!event.target.closest('.nav-dropdown')) {
+        // Close all dropdowns when toggling menu
+        if (!this.navLinksContainer.classList.contains('active')) {
             this.dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
         }
     },
 
-    handleDropdownClick(event, dropdown) {
-        if (window.innerWidth <= 768) {
-            event.preventDefault();
-            dropdown.classList.toggle('active');
+    handleResize() {
+        if (window.innerWidth > 768) {
+            this.navLinksContainer.classList.remove('active');
+            this.dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+            const icon = this.mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
         }
     },
 
@@ -97,20 +112,6 @@ const Navigation = {
 
             lastScroll = currentScroll;
         });
-    },
-
-    handleResize() {
-        if (window.innerWidth > 768) {
-            this.navLinksContainer.classList.remove('active');
-            this.dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-            const icon = this.mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            }
-        }
     }
 };
 
