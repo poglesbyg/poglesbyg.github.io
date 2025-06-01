@@ -7,7 +7,7 @@ layout: default
 
 ## Enterprise Architecture Overview
 
-Enterprise architecture is the foundation of scalable, maintainable, and secure systems. Our approach combines industry best practices with practical experience to deliver robust solutions.
+Enterprise architecture is the foundation of scalable, maintainable, and secure systems. My approach combines industry best practices with practical experience to deliver robust solutions.
 
 ### Core Architectural Principles
 
