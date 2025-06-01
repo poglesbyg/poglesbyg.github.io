@@ -260,10 +260,10 @@ a:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: var(--spacing-sm);
-    transition: color 0.15s ease;
     z-index: var(--z-fixed);
     position: relative;
-    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .mobile-menu-btn:hover {
@@ -294,17 +294,21 @@ a:hover {
         height: calc(100vh - 4rem);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        transform: translateY(-100%);
+        transform: translate3d(0, -100%, 0);
         opacity: 0;
-        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+        transition: transform 0.15s ease-out, opacity 0.15s ease-out;
         will-change: transform, opacity;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
     }
 
     .nav-links.active {
         display: flex;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 
@@ -313,8 +317,8 @@ a:hover {
         padding: var(--spacing-md);
         justify-content: center;
         font-size: 1.1rem;
-        transition: background-color 0.15s ease, color 0.15s ease;
-        will-change: background-color, color;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
 
     .dropdown-content {
@@ -328,7 +332,6 @@ a:hover {
         transform: none;
         min-width: 100%;
         margin-top: var(--spacing-sm);
-        transition: none;
     }
 
     .nav-dropdown.active .dropdown-content {
@@ -338,8 +341,8 @@ a:hover {
     .dropdown-content a {
         padding: var(--spacing-md) var(--spacing-xl);
         font-size: 1rem;
-        transition: background-color 0.15s ease, color 0.15s ease;
-        will-change: background-color, color;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
 }
 

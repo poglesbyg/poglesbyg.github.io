@@ -9,6 +9,7 @@ const Navigation = {
         this.isMobile = window.innerWidth <= 768;
         this.isMenuOpen = false;
         this.resizeTimeout = null;
+        this.touchStartY = 0;
 
         if (!this.mobileMenuBtn || !this.navLinksContainer) {
             console.error('Mobile menu elements not found');
@@ -23,21 +24,29 @@ const Navigation = {
     },
 
     bindEvents() {
-        // Mobile menu events
-        this.mobileMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            requestAnimationFrame(() => this.toggleMobileMenu());
-        });
+        // Mobile menu events with touch optimization
+        if ('ontouchstart' in window) {
+            this.mobileMenuBtn.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.toggleMobileMenu();
+            }, { passive: false });
+        } else {
+            this.mobileMenuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.toggleMobileMenu();
+            }, { passive: true });
+        }
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (this.isMenuOpen &&
                 !this.navLinksContainer.contains(e.target) &&
                 !this.mobileMenuBtn.contains(e.target)) {
-                requestAnimationFrame(() => this.toggleMobileMenu());
+                this.toggleMobileMenu();
             }
-        });
+        }, { passive: true });
 
         // Handle window resize
         window.addEventListener('resize', () => {
@@ -48,7 +57,7 @@ const Navigation = {
                 this.isMobile = window.innerWidth <= 768;
                 this.handleResize();
             });
-        });
+        }, { passive: true });
 
         // Handle dropdowns
         this.dropdowns.forEach(dropdown => {
@@ -58,38 +67,43 @@ const Navigation = {
                     if (this.isMobile) {
                         e.preventDefault();
                         e.stopPropagation();
-                        requestAnimationFrame(() => {
-                            dropdown.classList.toggle('active');
-                        });
+                        dropdown.classList.toggle('active');
                     }
-                });
+                }, { passive: true });
             }
         });
+
+        // Handle touch events for mobile menu
+        if ('ontouchstart' in window) {
+            this.navLinksContainer.addEventListener('touchstart', (e) => {
+                this.touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+
+            this.navLinksContainer.addEventListener('touchmove', (e) => {
+                if (!this.isMenuOpen) return;
+
+                const touchY = e.touches[0].clientY;
+                const diff = touchY - this.touchStartY;
+
+                if (diff > 50) { // Swipe down threshold
+                    this.toggleMobileMenu();
+                }
+            }, { passive: true });
+        }
 
         // Prevent body scroll when mobile menu is open
         this.navLinksContainer.addEventListener('transitionend', () => {
-            if (this.isMenuOpen) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Handle touch events for mobile
-        if ('ontouchstart' in window) {
-            this.navLinksContainer.addEventListener('touchstart', (e) => {
-                e.stopPropagation();
-            }, { passive: true });
-        }
+            document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+        }, { passive: true });
     },
 
     toggleMobileMenu() {
         this.isMenuOpen = !this.isMenuOpen;
         this.navLinksContainer.classList.toggle('active');
+
         const icon = this.mobileMenuBtn.querySelector('i');
         if (icon) {
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
+            icon.className = this.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
         }
 
         // Close all dropdowns when toggling menu
@@ -109,8 +123,7 @@ const Navigation = {
             });
             const icon = this.mobileMenuBtn.querySelector('i');
             if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
+                icon.className = 'fas fa-bars';
             }
             document.body.style.overflow = '';
         }
