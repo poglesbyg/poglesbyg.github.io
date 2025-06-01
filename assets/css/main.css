@@ -13,16 +13,16 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     
     /* Navigation */
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --nav-blur: blur(8px);
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --nav-blur: blur(10px);
     --border-color: #e5e7eb;
     --bg-secondary: #f3f4f6;
     
     /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
@@ -34,15 +34,18 @@
     --radius-xl: 16px;
     
     /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-normal: 300ms ease;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
     
     /* Z-index layers */
-    --z-dropdown: 1000;
-    --z-sticky: 1020;
-    --z-fixed: 1030;
-    --z-modal: 1040;
+    --z-negative: -1;
+    --z-elevate: 1;
+    --z-sticky: 100;
+    --z-fixed: 1000;
+    --z-modal: 2000;
+    --z-popover: 3000;
+    --z-tooltip: 4000;
     
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -257,7 +260,10 @@ a:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: var(--spacing-sm);
-    transition: color var(--transition-fast);
+    transition: color 0.15s ease;
+    z-index: var(--z-fixed);
+    position: relative;
+    will-change: transform;
 }
 
 .mobile-menu-btn:hover {
@@ -287,16 +293,28 @@ a:hover {
         z-index: var(--z-fixed);
         height: calc(100vh - 4rem);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
 
     .nav-links.active {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .nav-link {
         width: 100%;
         padding: var(--spacing-md);
         justify-content: center;
+        font-size: 1.1rem;
+        transition: background-color 0.15s ease, color 0.15s ease;
+        will-change: background-color, color;
     }
 
     .dropdown-content {
@@ -310,6 +328,7 @@ a:hover {
         transform: none;
         min-width: 100%;
         margin-top: var(--spacing-sm);
+        transition: none;
     }
 
     .nav-dropdown.active .dropdown-content {
@@ -318,149 +337,9 @@ a:hover {
 
     .dropdown-content a {
         padding: var(--spacing-md) var(--spacing-xl);
-    }
-
-    /* Main content adjustments */
-    .main-content {
-        margin-top: 4rem;
-        padding: var(--spacing-md);
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Hero section */
-    .hero {
-        padding: 2rem 0;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-
-    /* Grid layouts */
-    .skills,
-    .projects,
-    .contact-grid,
-    .solutions-grid,
-    .blog-grid,
-    .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin: 2rem 0;
-        padding: 0 1rem;
-    }
-
-    /* Cards */
-    .skill-card,
-    .project-card,
-    .contact-card,
-    .solution-card,
-    .blog-card,
-    .expertise-card {
-        margin: 0;
-        width: 100%;
-    }
-
-    /* Contact section */
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 1rem;
-    }
-
-    .contact-form-container {
-        padding: 1.5rem;
-    }
-
-    /* Solutions section */
-    .solutions-intro {
-        padding: 0 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .solution-header {
-        padding: 1.25rem;
-    }
-
-    .solution-content {
-        padding: 1.25rem;
-    }
-
-    /* Blog section */
-    .blog-image {
-        height: 180px;
-    }
-
-    .blog-content {
-        padding: 1.25rem;
-    }
-
-    /* Opportunities section */
-    .opportunities {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-    }
-
-    /* Typography adjustments */
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.25rem; }
-    h5 { font-size: 1.1rem; }
-    h6 { font-size: 1rem; }
-
-    p {
         font-size: 1rem;
-        line-height: 1.6;
-    }
-}
-
-/* Additional mobile optimizations */
-@media (max-width: 480px) {
-    .main-content {
-        padding: var(--spacing-sm);
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: var(--spacing-xl) 0;
-    }
-
-    .container {
-        padding: 0 var(--spacing-sm);
-    }
-
-    .contact-form-container,
-    .solution-card,
-    .blog-card {
-        padding: 1rem;
-    }
-
-    .solution-header,
-    .blog-content {
-        padding: 1rem;
-    }
-
-    .notification {
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
-        padding: 0.75rem 1rem;
+        transition: background-color 0.15s ease, color 0.15s ease;
+        will-change: background-color, color;
     }
 }
 
