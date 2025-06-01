@@ -116,5 +116,3 @@ Planned enhancements include:
 Building this portfolio has been a rewarding experience that combines technical skills with design principles. The result is a professional showcase that effectively communicates my expertise and experience.
 
 The site continues to evolve as I add new projects and refine the design. You can view the source code on [GitHub](https://github.com/poglesbyg/poglesbyg.github.io) and see the live site at [poglesbyg.github.io](https://poglesbyg.github.io).
-
-*Context improved by Giga AI* 
