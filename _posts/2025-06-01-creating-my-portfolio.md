@@ -6,8 +6,6 @@ categories: [portfolio, web-development]
 tags: [jekyll, css, responsive-design]
 ---
 
-# Building My Professional Portfolio: A Journey Through Design and Development
-
 Creating a professional portfolio website is more than just showcasing your work—it's about telling your story and demonstrating your expertise. In this post, I'll share my experience building my portfolio using Jekyll and modern web technologies.
 
 ## Choosing the Right Tools
