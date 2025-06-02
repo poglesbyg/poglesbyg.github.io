@@ -5,7 +5,7 @@ title: Home
 
 <div class="hero">
     <h1>Paul Greenwood</h1>
-    <p class="hero-subtitle">Healthcare Technology Specialist & Enterprise Solutions Architect</p>
+    <p class="hero-subtitle">Multidisciplinary Data Scientist & Developer | Full-Stack & Research-Driven Solutions</p>
     <p class="hero-description">MPS in Biomedical Health Informatics, UNC Chapel Hill</p>
 </div>
 
