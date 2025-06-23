@@ -1,8 +1,20 @@
 # theme: jekyll-theme-minimal
-title: Paul Greenwood
-description: Healthcare Technology Specialist & Enterprise Solutions Architect with MPS in Biomedical Health Informatics from UNC Chapel Hill
+title: Paul Greenwood - AI Engineer & Data Scientist
+description: AI Engineer and Multidisciplinary Data Scientist specializing in healthcare technology, machine learning, and enterprise solutions. MPS in Biomedical Health Informatics from UNC Chapel Hill. Expert in FHIR implementation, clinical AI systems, and predictive analytics.
 baseurl: ""
 url: "https://poglesbyg.github.io"
+
+# Author information
+author:
+  name: Paul Greenwood
+  email: contact@paulgreenwood.dev
+  twitter: poglesbyg
+  github: poglesbyg
+  linkedin: paul-greenwood-data-scientist
+
+# SEO and Social Media
+tagline: "AI Engineer & Healthcare Technology Specialist"
+keywords: "AI Engineer, Data Scientist, Healthcare Technology, FHIR, Machine Learning, Clinical AI, Healthcare Analytics, Biomedical Informatics, Enterprise Architecture, Python, TensorFlow, PyTorch"
 
 # Build settings
 markdown: kramdown
@@ -10,6 +22,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# SEO Plugin settings
+social:
+  name: Paul Greenwood
+  links:
+    - https://github.com/poglesbyg
+    - https://linkedin.com/in/paul-greenwood-data-scientist
 
 # Defaults
 defaults:
@@ -19,10 +38,18 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:year/:month/:day/:title/
+      author: Paul Greenwood
   - scope:
       path: ""
     values:
       layout: "default"
+      image: /assets/images/og-image.png
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
 
 # Exclude files from processing
 exclude:
@@ -30,10 +57,14 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - .bundle
+  - .sass-cache
   - .git
   - .cursor
   - .giga
+  - README.md
 
+# Site settings
 lsi: false
 safe: true
 source: .
@@ -41,6 +72,34 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
+
+# Kramdown settings
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Performance settings
+sass:
+  style: compressed
+
+# Analytics (add your tracking IDs)
+google_analytics: # Add your GA4 tracking ID
+google_site_verification: # Add your Google Search Console verification code
+
+# Contact information
+contact:
+  email: contact@paulgreenwood.dev
+  location: "North Carolina, USA"
+  availability: "Available for consulting and full-time opportunities"
+
+# Professional focus areas
+expertise:
+  - "AI & Machine Learning Engineering"
+  - "Healthcare Technology Integration"
+  - "Clinical Decision Support Systems"
+  - "FHIR Implementation & Integration"
+  - "Enterprise Architecture & Cloud Solutions"
+  - "Predictive Analytics & Data Science"
