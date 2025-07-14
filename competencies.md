@@ -14,16 +14,20 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
         </p>
         <div class="expertise-metrics">
             <div class="metric">
-                <span class="metric-number">8+</span>
-                <span class="metric-label">Years Experience</span>
+                <span class="metric-number">50K+</span>
+                <span class="metric-label">Clinical Notes/Day</span>
             </div>
             <div class="metric">
-                <span class="metric-number">50+</span>
-                <span class="metric-label">AI Models Built</span>
+                <span class="metric-number">92%</span>
+                <span class="metric-label">ML Accuracy</span>
             </div>
             <div class="metric">
-                <span class="metric-number">15+</span>
-                <span class="metric-label">Technologies Mastered</span>
+                <span class="metric-number">$2M+</span>
+                <span class="metric-label">Cost Savings</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">99.9%</span>
+                <span class="metric-label">System Uptime</span>
             </div>
         </div>
     </div>
@@ -79,7 +83,11 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                 <div class="achievements">
                     <div class="achievement">
                         <i class="fas fa-award"></i>
-                        <span>Built clinical assistant processing 50K+ notes daily</span>
+                        <span>Built clinical assistant processing 50K+ notes daily with 94% diagnostic accuracy</span>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Deployed across 15+ healthcare facilities serving 500+ clinicians</span>
                     </div>
                 </div>
             </div>
@@ -124,7 +132,11 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                 <div class="achievements">
                     <div class="achievement">
                         <i class="fas fa-award"></i>
-                        <span>92% accuracy in 30-day readmission prediction</span>
+                        <span>92% accuracy in 30-day readmission prediction with $1.2M annual savings</span>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Processed 10TB+ healthcare data across regional network</span>
                     </div>
                 </div>
             </div>
