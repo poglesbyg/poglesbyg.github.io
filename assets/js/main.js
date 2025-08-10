@@ -24,6 +24,8 @@ const Navigation = {
     },
 
     bindEvents() {
+        if (this._bound) return; // prevent duplicate binding
+        this._bound = true;
         // Mobile menu events with touch optimization
         if ('ontouchstart' in window) {
             this.mobileMenuBtn.addEventListener('touchstart', (e) => {
@@ -62,15 +64,64 @@ const Navigation = {
         // Handle dropdowns
         this.dropdowns.forEach(dropdown => {
             const link = dropdown.querySelector('.nav-link');
-            if (link) {
-                link.addEventListener('click', (e) => {
-                    if (this.isMobile) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        dropdown.classList.toggle('active');
+            const menu = dropdown.querySelector('.dropdown-content');
+            if (!link || !menu) return;
+
+            // Click/touch toggle for mobile
+            link.addEventListener('click', (e) => {
+                if (this.isMobile) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const expanded = link.getAttribute('aria-expanded') === 'true';
+                    link.setAttribute('aria-expanded', String(!expanded));
+                    dropdown.classList.toggle('active');
+                }
+            }, { passive: true });
+
+            // Keyboard support (Enter/Space to open, Esc to close, Arrow keys to navigate)
+            link.setAttribute('tabindex', '0');
+            link.addEventListener('keydown', (e) => {
+                const code = e.key;
+                if (code === 'Enter' || code === ' ') {
+                    e.preventDefault();
+                    const expanded = link.getAttribute('aria-expanded') === 'true';
+                    link.setAttribute('aria-expanded', String(!expanded));
+                    dropdown.classList.toggle('active');
+                    if (!expanded) {
+                        const firstItem = menu.querySelector('a');
+                        firstItem && firstItem.focus();
                     }
-                }, { passive: true });
-            }
+                } else if (code === 'Escape') {
+                    link.setAttribute('aria-expanded', 'false');
+                    dropdown.classList.remove('active');
+                    link.focus();
+                } else if (code === 'ArrowDown') {
+                    e.preventDefault();
+                    const items = Array.from(menu.querySelectorAll('a'));
+                    if (items.length) {
+                        (items[0]).focus();
+                    }
+                }
+            });
+
+            // Allow arrow navigation within menu
+            menu.querySelectorAll('a').forEach((item, idx, arr) => {
+                item.setAttribute('role', 'menuitem');
+                item.addEventListener('keydown', (e) => {
+                    const code = e.key;
+                    if (code === 'ArrowDown') {
+                        e.preventDefault();
+                        (arr[(idx + 1) % arr.length]).focus();
+                    } else if (code === 'ArrowUp') {
+                        e.preventDefault();
+                        (arr[(idx - 1 + arr.length) % arr.length]).focus();
+                    } else if (code === 'Escape') {
+                        link.setAttribute('aria-expanded', 'false');
+                        dropdown.classList.remove('active');
+                        link.focus();
+                    }
+                });
+            });
         });
 
         // Handle touch events for mobile menu
@@ -99,7 +150,7 @@ const Navigation = {
 
     toggleMobileMenu() {
         this.isMenuOpen = !this.isMenuOpen;
-        this.navLinksContainer.classList.toggle('active');
+            this.navLinksContainer.classList.toggle('active');
 
         const icon = this.mobileMenuBtn.querySelector('i');
         if (icon) {
@@ -120,6 +171,8 @@ const Navigation = {
             this.navLinksContainer.classList.remove('active');
             this.dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
+                const trigger = dropdown.querySelector('.nav-link');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
             });
             const icon = this.mobileMenuBtn.querySelector('i');
             if (icon) {

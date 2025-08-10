@@ -199,6 +199,16 @@ a:hover {
     gap: var(--spacing-sm);
 }
 
+/* Focus styles for keyboard accessibility */
+.nav-link:focus-visible,
+.dropdown-content a:focus-visible,
+.theme-toggle:focus-visible,
+.mobile-menu-btn:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
 .nav-link:hover {
     background: var(--bg-secondary);
     color: var(--primary-color);
