@@ -103,6 +103,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Reduce layout shift on hover by reserving space for borders */
+* {
+    border-color: var(--border-color);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
@@ -252,6 +257,13 @@ a:hover {
     display: block;
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Close siblings when one dropdown opens (CSS-only hint) */
+.nav-dropdown:hover ~ .nav-dropdown .dropdown-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 /* Chevron rotation for dropdowns */
@@ -455,6 +467,11 @@ a:hover {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Prefer-reduced-motion: simplify parallax effect */
+@media (prefers-reduced-motion: reduce) {
+    .hero-section { transform: none !important; }
 }
 
 /* Print Styles */
