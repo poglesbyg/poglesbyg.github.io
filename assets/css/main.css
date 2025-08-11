@@ -229,9 +229,23 @@ a:hover {
 }
 
 /* Dropdown Menu Styles */
-.nav-dropdown {
-    position: relative;
+.nav-dropdown { position: relative; }
+
+/* Reset details default markers */
+.nav-dropdown summary {
+    list-style: none;
 }
+.nav-dropdown summary::-webkit-details-marker { display: none; }
+
+/* Use [open] state for dropdown visibility */
+.nav-dropdown[open] .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Rotate chevron when open */
+.nav-dropdown[open] .nav-link i.fa-chevron-down { transform: rotate(180deg); }
 
 .dropdown-content {
     display: none;
@@ -253,11 +267,8 @@ a:hover {
     margin-top: 0;
 }
 
-.nav-dropdown:hover .dropdown-content {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Keep hover support for desktop, details also supports click/keyboard */
+.nav-dropdown:hover .dropdown-content { display: block; opacity: 1; transform: translateY(0); }
 
 /* Close siblings when one dropdown opens (CSS-only hint) */
 .nav-dropdown:hover ~ .nav-dropdown .dropdown-content {
@@ -403,22 +414,8 @@ a:hover {
         -webkit-transform: translateZ(0);
     }
 
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        backdrop-filter: none;
-        display: none;
-        opacity: 1;
-        transform: none;
-        min-width: 100%;
-        margin-top: var(--spacing-sm);
-    }
-
-    .nav-dropdown.active .dropdown-content {
-        display: block;
-    }
+    .dropdown-content { position: static; box-shadow: none; border: none; background: transparent; backdrop-filter: none; display: none; opacity: 1; transform: none; min-width: 100%; margin-top: var(--spacing-sm); }
+    .nav-dropdown[open] .dropdown-content { display: block; }
 
     .dropdown-content a {
         padding: var(--spacing-md) var(--spacing-xl);

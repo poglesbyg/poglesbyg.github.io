@@ -62,63 +62,55 @@ const Navigation = {
         }, { passive: true });
 
         // Handle dropdowns
+        // details/summary dropdown management
         this.dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('.nav-link');
+            const summary = dropdown.querySelector('summary.nav-link');
             const menu = dropdown.querySelector('.dropdown-content');
-            if (!link || !menu) return;
+            if (!summary || !menu) return;
 
-            // Click/touch toggle for mobile
-            link.addEventListener('click', (e) => {
-                if (this.isMobile) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const expanded = link.getAttribute('aria-expanded') === 'true';
-                    link.setAttribute('aria-expanded', String(!expanded));
-                    dropdown.classList.toggle('active');
+            summary.addEventListener('click', (e) => {
+                // Close other open dropdowns on desktop
+                if (!this.isMobile) {
+                    this.dropdowns.forEach(d => { if (d !== dropdown) d.removeAttribute('open'); });
                 }
-            }, { passive: true });
-
-            // Keyboard support (Enter/Space to open, Esc to close, Arrow keys to navigate)
-            link.setAttribute('tabindex', '0');
-            link.addEventListener('keydown', (e) => {
-                const code = e.key;
-                if (code === 'Enter' || code === ' ') {
-                    e.preventDefault();
-                    const expanded = link.getAttribute('aria-expanded') === 'true';
-                    link.setAttribute('aria-expanded', String(!expanded));
-                    dropdown.classList.toggle('active');
-                    if (!expanded) {
+                // reflect aria-expanded
+                setTimeout(() => {
+                    const isOpen = dropdown.hasAttribute('open');
+                    summary.setAttribute('aria-expanded', String(isOpen));
+                    if (isOpen) {
                         const firstItem = menu.querySelector('a');
-                        firstItem && firstItem.focus();
+                        firstItem && firstItem.focus({ preventScroll: true });
                     }
-                } else if (code === 'Escape') {
-                    link.setAttribute('aria-expanded', 'false');
-                    dropdown.classList.remove('active');
-                    link.focus();
-                } else if (code === 'ArrowDown') {
+                }, 0);
+            });
+
+            summary.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    dropdown.removeAttribute('open');
+                    summary.setAttribute('aria-expanded', 'false');
+                    summary.focus();
+                } else if (e.key === 'ArrowDown') {
                     e.preventDefault();
-                    const items = Array.from(menu.querySelectorAll('a'));
-                    if (items.length) {
-                        (items[0]).focus();
-                    }
+                    dropdown.setAttribute('open', '');
+                    summary.setAttribute('aria-expanded', 'true');
+                    const firstItem = menu.querySelector('a');
+                    firstItem && firstItem.focus({ preventScroll: true });
                 }
             });
 
-            // Allow arrow navigation within menu
             menu.querySelectorAll('a').forEach((item, idx, arr) => {
                 item.setAttribute('role', 'menuitem');
                 item.addEventListener('keydown', (e) => {
-                    const code = e.key;
-                    if (code === 'ArrowDown') {
+                    if (e.key === 'Escape') {
+                        dropdown.removeAttribute('open');
+                        summary.setAttribute('aria-expanded', 'false');
+                        summary.focus();
+                    } else if (e.key === 'ArrowDown') {
                         e.preventDefault();
                         (arr[(idx + 1) % arr.length]).focus();
-                    } else if (code === 'ArrowUp') {
+                    } else if (e.key === 'ArrowUp') {
                         e.preventDefault();
                         (arr[(idx - 1 + arr.length) % arr.length]).focus();
-                    } else if (code === 'Escape') {
-                        link.setAttribute('aria-expanded', 'false');
-                        dropdown.classList.remove('active');
-                        link.focus();
                     }
                 });
             });
