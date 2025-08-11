@@ -21,6 +21,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme') || 
+                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.classList.add(theme + '-theme');
+        })();
+    </script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     
@@ -33,6 +42,9 @@
     
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
     <nav class="nav-container" aria-label="Main navigation">
         <div class="nav-content">
             <a href="/" class="nav-logo">
@@ -79,7 +91,7 @@
         </div>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         {{ content }}
     </main>
 

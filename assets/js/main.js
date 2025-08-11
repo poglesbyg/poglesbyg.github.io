@@ -41,12 +41,16 @@ const Navigation = {
             }, { passive: true });
         }
 
-        // Close menu when clicking outside
+        // Close menu when clicking outside or on a link
         document.addEventListener('click', (e) => {
-            if (this.isMenuOpen &&
-                !this.navLinksContainer.contains(e.target) &&
-                !this.mobileMenuBtn.contains(e.target)) {
-                this.toggleMobileMenu();
+            if (this.isMenuOpen) {
+                if (!this.navLinksContainer.contains(e.target) && 
+                    !this.mobileMenuBtn.contains(e.target)) {
+                    this.toggleMobileMenu();
+                } else if (e.target.tagName === 'A' && e.target.closest('.nav-links')) {
+                    // Close menu when clicking on a navigation link
+                    setTimeout(() => this.toggleMobileMenu(), 100);
+                }
             }
         }, { passive: true });
 
@@ -191,7 +195,9 @@ const Navigation = {
 
     initScrollBehavior() {
         let lastScroll = 0;
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+        
+        const updateScrolled = () => {
             const currentScroll = window.pageYOffset;
 
             if (currentScroll > 50) {
@@ -201,7 +207,15 @@ const Navigation = {
             }
 
             lastScroll = currentScroll;
-        });
+            ticking = false;
+        };
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrolled);
+                ticking = true;
+            }
+        }, { passive: true });
     }
 };
 

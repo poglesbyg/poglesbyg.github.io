@@ -13,7 +13,7 @@ title: Home
     </div>
     <div class="hero-content">
         <div class="hero-avatar">
-            <img src="{{ site.baseurl }}/assets/images/1555515902875.jpeg" alt="Paul Greenwood" class="hero-image">
+            <img src="{{ site.baseurl }}/assets/images/1555515902875.jpeg" alt="Paul Greenwood" class="hero-image" width="120" height="120" fetchpriority="high">
             <div class="status-indicator"></div>
         </div>
         <h1 class="hero-title">
