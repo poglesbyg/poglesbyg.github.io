@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{{ page.title | default: site.title | default: "Paul Greenwood - AI Engineer & Data Scientist" }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | default: "Healthcare AI specialist with expertise in clinical decision support, predictive analytics, and enterprise architecture. MPS in Biomedical Health Informatics from UNC Chapel Hill." }}">
     
-    <!-- SEO Tags -->
-    <meta property="og:title" content="{{ page.title | default: site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <!-- SEO & Open Graph Tags -->
+    <meta property="og:title" content="{{ page.title | default: site.title | default: "Paul Greenwood - AI Engineer & Data Scientist" }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | default: "Healthcare AI specialist with expertise in clinical decision support, predictive analytics, and enterprise architecture." }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/1555515902875.jpeg">
+    <meta property="og:site_name" content="Paul Greenwood Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/1555515902875.jpeg">
+    
+    <!-- Additional SEO -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="author" content="Paul Greenwood">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Paul Greenwood",
+      "jobTitle": "AI Engineer & Data Scientist",
+      "description": "Healthcare technology specialist with expertise in AI, machine learning, and clinical informatics",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "image": "{{ site.url }}{{ site.baseurl }}/assets/images/1555515902875.jpeg",
+      "sameAs": [
+        "https://github.com/poglesbyg",
+        "https://www.linkedin.com/in/poglesbyg/"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of North Carolina at Chapel Hill"
+      },
+      "knowsAbout": ["Healthcare AI", "Machine Learning", "FHIR", "Clinical Informatics", "Python", "Cloud Architecture"]
+    }
+    </script>
     
     <!-- Modern Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

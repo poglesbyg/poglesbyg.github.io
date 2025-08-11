@@ -527,29 +527,68 @@ function initProjectFiltering() {
     });
 }
 
-// Contact form handling (if contact form exists)
+// Contact form handling with validation and error handling
 function initContactForm() {
     const contactForm = document.querySelector('.contact-form');
     if (!contactForm) return;
 
-    contactForm.addEventListener('submit', function (e) {
+    // Add form validation
+    const validateForm = (form) => {
+        const email = form.querySelector('input[type="email"]');
+        const message = form.querySelector('textarea');
+        const errors = [];
+
+        if (email && !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            errors.push('Please enter a valid email address');
+        }
+        
+        if (message && message.value.length < 10) {
+            errors.push('Message must be at least 10 characters');
+        }
+
+        return errors;
+    };
+
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
+
+        // Validate form
+        const errors = validateForm(this);
+        if (errors.length > 0) {
+            showNotification(errors.join('. '), 'error');
+            return;
+        }
 
         const formData = new FormData(this);
         const submitButton = this.querySelector('.submit-button');
-        const originalText = submitButton.textContent;
+        const originalText = submitButton.innerHTML;
 
         // Show loading state
-        submitButton.textContent = 'Sending...';
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
 
-        // Simulate form submission (replace with actual endpoint)
-        setTimeout(() => {
+        try {
+            // Simulate form submission (replace with actual endpoint)
+            await new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // Simulate random success/failure for demo
+                    if (Math.random() > 0.1) {
+                        resolve();
+                    } else {
+                        reject(new Error('Network error'));
+                    }
+                }, 2000);
+            });
+
             showNotification('Message sent successfully!', 'success');
             this.reset();
-            submitButton.textContent = originalText;
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showNotification('Failed to send message. Please try again.', 'error');
+        } finally {
+            submitButton.innerHTML = originalText;
             submitButton.disabled = false;
-        }, 2000);
+        }
     });
 }
 
@@ -653,6 +692,15 @@ const animationStyles = `
 `;
 
 // (Injected animation styles removed; defined in CSS file)
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => console.log('ServiceWorker registered:', registration.scope))
+            .catch(err => console.log('ServiceWorker registration failed:', err));
+    });
+}
 
 // Module integration with existing code
 document.addEventListener('DOMContentLoaded', function () {
