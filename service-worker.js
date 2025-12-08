@@ -19,7 +19,9 @@ self.addEventListener('install', event => {
         return cache.addAll(urlsToCache);
       })
       .catch(err => {
-        console.log('Cache addAll failed:', err);
+        console.error('Cache addAll failed:', err);
+        // Rethrow to prevent service worker activation with incomplete cache
+        throw err;
       })
   );
 });

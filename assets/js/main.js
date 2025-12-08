@@ -720,6 +720,10 @@ function initScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
+                // Always reveal the parent container first
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                
                 // Staggered reveal for child elements
                 const children = entry.target.querySelectorAll('.highlight-card, .expertise-card, .project-card, .case-study-card, .recent-project-card');
                 
@@ -734,9 +738,6 @@ function initScrollReveal() {
                             child.style.transform = 'translateY(0)';
                         }, i * 100);
                     });
-                } else {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
                 }
                 
                 observer.unobserve(entry.target);
