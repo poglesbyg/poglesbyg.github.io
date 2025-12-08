@@ -481,11 +481,9 @@ function initParallax() {
     function updateParallax() {
         const scrolled = lastScrollY;
         
-        // Subtle parallax on hero - reduced intensity for better performance
+        // Only apply parallax to floating elements, not the hero section itself
+        // This prevents the hero content from being clipped when scrolling
         if (scrolled < window.innerHeight) {
-            const speed = scrolled * 0.3;
-            hero.style.transform = `translate3d(0, ${speed}px, 0)`;
-            
             // Parallax on floating elements with different speeds
             floatingElements.forEach((el, index) => {
                 const elementSpeed = scrolled * (0.1 + index * 0.05);
