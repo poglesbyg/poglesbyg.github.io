@@ -506,8 +506,7 @@ function initParallax() {
     }, { passive: true });
 }
 
-// Initialize parallax on load
-window.addEventListener('load', initParallax, { once: true });
+// Note: initParallax is called from DOMContentLoaded handler
 
 // Dynamic project filtering (if implemented)
 function initProjectFiltering() {
@@ -747,12 +746,17 @@ function initScrollReveal() {
         });
     }, observerOptions);
 
-    // Observe sections and grids
-    document.querySelectorAll('.highlights-grid, .expertise-grid, .recent-projects-grid, .case-studies-grid, .projects-grid, .section-header').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        observer.observe(section);
+    // Observe sections and grids - delay to avoid conflict with page load animation
+    requestAnimationFrame(() => {
+        // Wait for page load animation to complete (0.6s)
+        setTimeout(() => {
+            document.querySelectorAll('.highlights-grid, .expertise-grid, .recent-projects-grid, .case-studies-grid, .projects-grid, .section-header').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(section);
+            });
+        }, 100); // Small delay to let page render first
     });
 }
 

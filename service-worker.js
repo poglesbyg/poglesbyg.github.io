@@ -1,44 +1,68 @@
-const CACHE_NAME = 'portfolio-v1';
+const CACHE_NAME = 'portfolio-v2';
 const urlsToCache = [
   '/',
   '/assets/css/main.css',
   '/assets/js/main.js',
   '/assets/images/1555515902875.jpeg',
-  '/projects',
-  '/blog',
-  '/competencies',
-  '/architecture',
-  '/contact',
   '/404.html'
 ];
 
 // Install service worker and cache resources
 self.addEventListener('install', event => {
+  // Skip waiting to activate immediately
+  self.skipWaiting();
+  
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
+      .catch(err => {
+        console.log('Cache addAll failed:', err);
+      })
   );
 });
 
 // Fetch resources from cache when offline
 self.addEventListener('fetch', event => {
+  // Skip non-GET requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  // Skip cross-origin requests
+  if (!event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  // For navigation requests (HTML pages), use network-first strategy
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => {
+          return caches.match('/404.html');
+        })
+    );
+    return;
+  }
+
+  // For other requests (CSS, JS, images), use cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Cache hit - return response
         if (response) {
           return response;
         }
 
-        // Clone the request
-        const fetchRequest = event.request.clone();
+        return fetch(event.request).then(response => {
+          // Don't cache non-successful responses or opaque responses
+          if (!response || response.status !== 200) {
+            return response;
+          }
 
-        return fetch(fetchRequest).then(response => {
-          // Check if valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
+          // Don't cache redirects
+          if (response.redirected) {
             return response;
           }
 
@@ -54,25 +78,31 @@ self.addEventListener('fetch', event => {
         });
       })
       .catch(() => {
-        // Return 404 page when offline and page not cached
-        return caches.match('/404.html');
+        // For failed requests, try to return from cache
+        return caches.match(event.request);
       })
   );
 });
 
-// Clean up old caches
+// Clean up old caches and claim clients
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    Promise.all([
+      // Clean old caches
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheWhitelist.indexOf(cacheName) === -1) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      }),
+      // Take control of all clients immediately
+      self.clients.claim()
+    ])
   );
 });
