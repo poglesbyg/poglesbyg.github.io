@@ -3,9 +3,13 @@ title: Architecture
 layout: default
 ---
 
-# System Architecture
-
-Enterprise architecture focused on scalable, maintainable, and secure systems, developed through advanced education and practical experience.
+<div class="page-hero">
+    <div class="page-hero-content">
+        <h1><i class="fas fa-sitemap"></i> System Architecture</h1>
+        <p class="page-hero-subtitle">Enterprise-Grade Infrastructure & Design Patterns</p>
+        <p class="page-hero-description">Scalable, maintainable, and secure systems developed through advanced education and practical experience</p>
+    </div>
+</div>
 
 ## Core Principles
 

@@ -4,8 +4,15 @@ title: Blog
 permalink: /blog/
 ---
 
+<div class="page-hero">
+    <div class="page-hero-content">
+        <h1><i class="fas fa-blog"></i> Blog</h1>
+        <p class="page-hero-subtitle">Insights on AI, Healthcare Technology & Data Science</p>
+        <p class="page-hero-description">Exploring the intersection of artificial intelligence, machine learning, and healthcare innovation</p>
+    </div>
+</div>
+
 <div class="blog-container">
-    <h1 class="blog-title">Blog Posts</h1>
     
     <div class="blog-grid">
         {% for post in site.posts %}
