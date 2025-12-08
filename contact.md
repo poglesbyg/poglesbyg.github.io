@@ -16,7 +16,7 @@ layout: default
         <div class="contact-card">
             <i class="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/poglesbyg" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/poglesbyg</a>
+            <a href="https://linkedin.com/in/poglesbyg" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/poglesbyg</a>
         </div>
 
         <div class="contact-card">
