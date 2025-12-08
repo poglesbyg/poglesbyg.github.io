@@ -391,53 +391,10 @@ function initFloatingElements() {
     });
 }
 
-// Typing animation for hero section
-function initTypingAnimation() {
-    const titleSubtitle = document.querySelector('.title-subtitle');
-    if (!titleSubtitle) return;
+// Typing animation removed - was distracting
+// Replaced with subtle fade-in animation via CSS
 
-    const text = titleSubtitle.textContent;
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseTime = 2000;
-
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeText() {
-        const currentText = isDeleting
-            ? text.substring(0, charIndex - 1)
-            : text.substring(0, charIndex + 1);
-
-        titleSubtitle.textContent = currentText;
-
-        if (isDeleting) {
-            charIndex--;
-            if (charIndex < 0) {
-                isDeleting = false;
-                setTimeout(typeText, pauseTime);
-                return;
-            }
-            setTimeout(typeText, deletingSpeed);
-        } else {
-            charIndex++;
-            if (charIndex > text.length) {
-                isDeleting = true;
-                setTimeout(typeText, pauseTime);
-                return;
-            }
-            setTimeout(typeText, typingSpeed);
-        }
-    }
-
-    // Start typing animation after a delay
-    setTimeout(() => {
-        titleSubtitle.textContent = '';
-        typeText();
-    }, 1000);
-}
-
-// Counter animation for statistics
+// Counter animation for statistics - improved to handle text-based stats
 function initCounterAnimation() {
     const observerOptions = {
         threshold: 0.5
@@ -447,55 +404,109 @@ function initCounterAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counters = entry.target.querySelectorAll('.stat-number');
-                counters.forEach(counter => {
-                    animateCounter(counter);
+                counters.forEach((counter, index) => {
+                    // Staggered animation
+                    setTimeout(() => {
+                        animateCounter(counter);
+                    }, index * 150);
                 });
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.hero-stats, .projects-stats').forEach(section => {
+    document.querySelectorAll('.hero-stats, .projects-stats, .expertise-metrics').forEach(section => {
         observer.observe(section);
     });
 }
 
 function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/[^\d]/g, ''));
-    const suffix = element.textContent.replace(/[\d]/g, '');
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + suffix;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + suffix;
+    const text = element.textContent.trim();
+    const numericMatch = text.match(/^(\d+\.?\d*)(.*)$/);
+    
+    // If it's purely numeric with optional suffix (like "50K+" or "92%")
+    if (numericMatch) {
+        const target = parseFloat(numericMatch[1]);
+        const suffix = numericMatch[2] || '';
+        const duration = 1500;
+        const startTime = performance.now();
+        
+        // Easing function for smooth animation
+        const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+        
+        function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutQuart(progress);
+            const current = target * easedProgress;
+            
+            if (Number.isInteger(target)) {
+                element.textContent = Math.floor(current) + suffix;
+            } else {
+                element.textContent = current.toFixed(1) + suffix;
+            }
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target + suffix;
+            }
         }
-    }, 16);
+        
+        requestAnimationFrame(updateCounter);
+    } else {
+        // For text-based stats (like "UNC", "MPS", "LLM"), just add a pop-in animation
+        element.style.opacity = '0';
+        element.style.transform = 'scale(0.5)';
+        element.style.transition = 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        
+        requestAnimationFrame(() => {
+            element.style.opacity = '1';
+            element.style.transform = 'scale(1)';
+        });
+    }
 }
 
 // (Legacy DOMContentLoaded for counter removed; unified at bottom)
 
-// Parallax effect for hero section
+// Parallax effect for hero section - optimized with requestAnimationFrame
 function initParallax() {
     const hero = document.querySelector('.hero-section');
+    const floatingElements = document.querySelectorAll('.floating-element');
     if (!hero) return;
 
-    window.addEventListener('scroll', function () {
-        const scrolled = window.pageYOffset;
-        const speed = scrolled * 0.5;
+    let ticking = false;
+    let lastScrollY = 0;
 
-        if (hero) {
-            hero.style.transform = `translateY(${speed}px)`;
+    function updateParallax() {
+        const scrolled = lastScrollY;
+        
+        // Subtle parallax on hero - reduced intensity for better performance
+        if (scrolled < window.innerHeight) {
+            const speed = scrolled * 0.3;
+            hero.style.transform = `translate3d(0, ${speed}px, 0)`;
+            
+            // Parallax on floating elements with different speeds
+            floatingElements.forEach((el, index) => {
+                const elementSpeed = scrolled * (0.1 + index * 0.05);
+                el.style.transform = `translate3d(0, ${-elementSpeed}px, 0)`;
+            });
         }
-    });
+        
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        lastScrollY = window.pageYOffset;
+        
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
-// Initialize parallax on load (keep for smoother hero animation start)
+// Initialize parallax on load
 window.addEventListener('load', initParallax, { once: true });
 
 // Dynamic project filtering (if implemented)
@@ -702,6 +713,74 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Enhanced scroll reveal animation
+function initScrollReveal() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Staggered reveal for child elements
+                const children = entry.target.querySelectorAll('.highlight-card, .expertise-card, .project-card, .case-study-card, .recent-project-card');
+                
+                if (children.length > 0) {
+                    children.forEach((child, i) => {
+                        child.style.opacity = '0';
+                        child.style.transform = 'translateY(30px)';
+                        
+                        setTimeout(() => {
+                            child.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                            child.style.opacity = '1';
+                            child.style.transform = 'translateY(0)';
+                        }, i * 100);
+                    });
+                } else {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections and grids
+    document.querySelectorAll('.highlights-grid, .expertise-grid, .recent-projects-grid, .case-studies-grid, .projects-grid, .section-header').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(section);
+    });
+}
+
+// Smooth hover tilt effect for cards
+function initCardTilt() {
+    const cards = document.querySelectorAll('.highlight-card, .recent-project-card, .case-study-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+}
+
 // Module integration with existing code
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize all modules
@@ -714,9 +793,12 @@ document.addEventListener('DOMContentLoaded', function () {
     initSkillBars();
     initCounterAnimation();
     initFloatingElements();
-    initTypingAnimation();
     initParallax();
     initProjectFiltering();
     initContactForm();
     initLazyLoading();
+    
+    // New enhanced animations
+    initScrollReveal();
+    initCardTilt();
 }); 
