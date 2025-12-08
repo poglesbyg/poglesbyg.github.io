@@ -7,27 +7,27 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
 <div class="competencies-hero">
     <div class="competencies-hero-content">
         <h1><i class="fas fa-brain"></i> Core Competencies</h1>
-        <p class="competencies-subtitle">AI Engineering & Multidisciplinary Data Science Excellence</p>
+        <p class="competencies-subtitle">Data Science & AI Product Management Excellence</p>
         <p class="competencies-description">
-            Comprehensive expertise in artificial intelligence, machine learning, and healthcare technology
-            with a Master's degree in Biomedical Health Informatics from UNC Chapel Hill.
+            5+ years advancing healthcare innovation through AI, machine learning, and large language models
+            at UNC Chapel Hill School of Medicine. MPS in Bioinformatics & Health Informatics.
         </p>
         <div class="expertise-metrics">
             <div class="metric">
-                <span class="metric-number">50K+</span>
-                <span class="metric-label">Clinical Notes/Day</span>
+                <span class="metric-number">5+</span>
+                <span class="metric-label">Years Experience</span>
             </div>
             <div class="metric">
-                <span class="metric-number">92%</span>
-                <span class="metric-label">ML Accuracy</span>
+                <span class="metric-number">AI</span>
+                <span class="metric-label">Product Leadership</span>
             </div>
             <div class="metric">
-                <span class="metric-number">$2M+</span>
-                <span class="metric-label">Cost Savings</span>
+                <span class="metric-number">LLM</span>
+                <span class="metric-label">Integration</span>
             </div>
             <div class="metric">
-                <span class="metric-number">99.9%</span>
-                <span class="metric-label">System Uptime</span>
+                <span class="metric-number">MPS</span>
+                <span class="metric-label">Health Informatics</span>
             </div>
         </div>
     </div>
@@ -53,21 +53,21 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                 </div>
                 <div class="skill-breakdown">
                     <div class="skill-item">
-                        <span class="skill-name">Prompt Engineering</span>
+                        <span class="skill-name">LLM Integration</span>
                         <div class="skill-bar">
                             <div class="skill-progress" data-width="95"></div>
                         </div>
                         <span class="skill-percent">95%</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Fine-tuning & RAG</span>
+                        <span class="skill-name">Workflow Automation</span>
                         <div class="skill-bar">
                             <div class="skill-progress" data-width="90"></div>
                         </div>
                         <span class="skill-percent">90%</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">LLM Integration</span>
+                        <span class="skill-name">Clinical Decision Support</span>
                         <div class="skill-bar">
                             <div class="skill-progress" data-width="93"></div>
                         </div>
@@ -77,17 +77,17 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                 <div class="technologies">
                     <span class="tech-chip">GPT-4</span>
                     <span class="tech-chip">Claude</span>
-                    <span class="tech-chip">Llama</span>
                     <span class="tech-chip">LangChain</span>
+                    <span class="tech-chip">RAG</span>
                 </div>
                 <div class="achievements">
                     <div class="achievement">
                         <i class="fas fa-award"></i>
-                        <span>Built clinical assistant processing 50K+ notes daily with 94% diagnostic accuracy</span>
+                        <span>Led AI-powered tools development at UNC School of Medicine</span>
                     </div>
                     <div class="achievement">
                         <i class="fas fa-trophy"></i>
-                        <span>Deployed across 15+ healthcare facilities serving 500+ clinicians</span>
+                        <span>Integrated LLMs to streamline clinical research workflows</span>
                     </div>
                 </div>
             </div>
@@ -97,17 +97,10 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Machine Learning & Deep Learning</h3>
+                    <h3>Machine Learning & AI</h3>
                     <div class="proficiency-badge expert">Expert</div>
                 </div>
                 <div class="skill-breakdown">
-                    <div class="skill-item">
-                        <span class="skill-name">Neural Networks</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="88"></div>
-                        </div>
-                        <span class="skill-percent">88%</span>
-                    </div>
                     <div class="skill-item">
                         <span class="skill-name">Predictive Modeling</span>
                         <div class="skill-bar">
@@ -116,27 +109,34 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                         <span class="skill-percent">92%</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">MLOps</span>
+                        <span class="skill-name">Healthcare Analytics</span>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
+                            <div class="skill-progress" data-width="90"></div>
                         </div>
-                        <span class="skill-percent">85%</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Data Science</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                        <span class="skill-percent">88%</span>
                     </div>
                 </div>
                 <div class="technologies">
+                    <span class="tech-chip">Python</span>
                     <span class="tech-chip">TensorFlow</span>
                     <span class="tech-chip">PyTorch</span>
                     <span class="tech-chip">Scikit-learn</span>
-                    <span class="tech-chip">Kubeflow</span>
                 </div>
                 <div class="achievements">
                     <div class="achievement">
                         <i class="fas fa-award"></i>
-                        <span>92% accuracy in 30-day readmission prediction with $1.2M annual savings</span>
+                        <span>5+ years ML experience at UNC School of Medicine</span>
                     </div>
                     <div class="achievement">
                         <i class="fas fa-chart-line"></i>
-                        <span>Processed 10TB+ healthcare data across regional network</span>
+                        <span>Optimized research processes through AI-driven solutions</span>
                     </div>
                 </div>
             </div>
@@ -579,11 +579,11 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
         </div>
     </section>
 
-    <!-- Certifications & Education -->
+    <!-- Education -->
     <section id="credentials" class="competency-section">
         <div class="section-header">
-            <h2><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
-            <p>Formal education and professional certifications demonstrating continuous learning</p>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <p>Multidisciplinary academic background spanning health informatics, biochemistry, cognitive science, and linguistics</p>
         </div>
         
         <div class="credentials-showcase">
@@ -594,13 +594,13 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
                     </div>
                     <div class="degree-info">
                         <h3>Master of Professional Science (MPS)</h3>
-                        <h4>Biomedical Health Informatics</h4>
-                        <p class="institution">University of North Carolina at Chapel Hill</p>
+                        <h4>Bioinformatics & Health Informatics</h4>
+                        <p class="institution">University of North Carolina at Chapel Hill (2021 - 2025)</p>
                         <div class="degree-highlights">
                             <span class="highlight-item">🏥 Clinical Informatics</span>
                             <span class="highlight-item">📊 Health Data Analytics</span>
-                            <span class="highlight-item">🔗 System Integration</span>
-                            <span class="highlight-item">🔒 Healthcare Security</span>
+                            <span class="highlight-item">🤖 AI in Healthcare</span>
+                            <span class="highlight-item">🧬 Bioinformatics</span>
                         </div>
                     </div>
                 </div>
@@ -608,33 +608,29 @@ description: AI Engineering and Data Science expertise spanning healthcare techn
             
             <div class="certifications-grid">
                 <div class="cert-category">
-                    <h4><i class="fas fa-cloud"></i> Cloud Certifications</h4>
+                    <h4><i class="fas fa-flask"></i> Science Background</h4>
                     <div class="cert-items">
                         <div class="cert-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS Solutions Architect</span>
-                            <div class="cert-status in-progress">In Progress</div>
+                            <i class="fas fa-dna"></i>
+                            <span>Post Baccalaureate, Biochemistry - UNC Greensboro (2017-2019)</span>
                         </div>
                         <div class="cert-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure AI Engineer</span>
-                            <div class="cert-status planned">Planned</div>
+                            <i class="fas fa-book"></i>
+                            <span>English Language & Literature - UNC Chapel Hill (2016-2017)</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="cert-category">
-                    <h4><i class="fas fa-brain"></i> AI/ML Certifications</h4>
+                    <h4><i class="fas fa-globe"></i> International Education</h4>
                     <div class="cert-items">
                         <div class="cert-item">
-                            <i class="fas fa-robot"></i>
-                            <span>Google ML Engineer</span>
-                            <div class="cert-status planned">Planned</div>
+                            <i class="fas fa-brain"></i>
+                            <span>Cognitive Science - University of Bergen, Norway (2012-2016)</span>
                         </div>
                         <div class="cert-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>TensorFlow Developer</span>
-                            <div class="cert-status planned">Planned</div>
+                            <i class="fas fa-language"></i>
+                            <span>Linguistics - University of Oslo, Norway (2010-2012)</span>
                         </div>
                     </div>
                 </div>

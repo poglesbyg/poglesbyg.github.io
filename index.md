@@ -18,17 +18,17 @@ title: Home
         </div>
         <h1 class="hero-title">
             <span class="title-line">Paul Greenwood</span>
-            <span class="title-subtitle">AI Engineer & Data Scientist</span>
+            <span class="title-subtitle">Data Scientist & AI Product Manager</span>
         </h1>
         <div class="hero-tags">
-            <span class="hero-tag gradient-ai">🤖 AI Engineering</span>
-            <span class="hero-tag gradient-data">📊 Data Science</span>
-            <span class="hero-tag gradient-health">⚕️ Healthcare Tech</span>
+            <span class="hero-tag gradient-ai">🤖 Artificial Intelligence</span>
+            <span class="hero-tag gradient-data">📊 Machine Learning</span>
+            <span class="hero-tag gradient-health">🧠 Large Language Models</span>
         </div>
         <p class="hero-description">
-            <strong>MPS in Biomedical Health Informatics</strong> from UNC Chapel Hill<br>
-            Architecting intelligent healthcare systems with 50K+ clinical notes processed daily, 
-            92% prediction accuracy, and $2M+ in cost savings through AI-driven automation
+            <strong>MPS in Bioinformatics & Health Informatics</strong> from UNC Chapel Hill<br>
+            5+ years advancing healthcare innovation through AI, machine learning, and LLMs at UNC School of Medicine. 
+            Currently Data Scientist/Manager at Leading Solutions, LLC supporting USDA Forest Service.
         </p>
         <div class="hero-cta">
             <a href="#expertise" class="cta-primary">
@@ -42,20 +42,20 @@ title: Home
         </div>
         <div class="hero-stats">
             <div class="stat">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">Clinical Notes/Day</span>
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Healthcare AI</span>
             </div>
             <div class="stat">
-                <span class="stat-number">92%</span>
-                <span class="stat-label">Prediction Accuracy</span>
+                <span class="stat-number">UNC</span>
+                <span class="stat-label">School of Medicine</span>
             </div>
             <div class="stat">
-                <span class="stat-number">$2M+</span>
-                <span class="stat-label">Cost Savings</span>
+                <span class="stat-number">MPS</span>
+                <span class="stat-label">Health Informatics</span>
             </div>
             <div class="stat">
-                <span class="stat-number">99.9%</span>
-                <span class="stat-label">System Uptime</span>
+                <span class="stat-number">LLM</span>
+                <span class="stat-label">Integration Expert</span>
             </div>
         </div>
     </div>
@@ -63,44 +63,44 @@ title: Home
 
 <div class="experience-highlights">
     <div class="section-header">
-        <h2><i class="fas fa-brain"></i> AI Engineering Excellence</h2>
-        <p>Cutting-edge AI solutions with measurable business impact</p>
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <p>Leading healthcare innovation through AI and data science</p>
     </div>
     <div class="highlights-grid">
         <div class="highlight-card ai-card">
             <div class="card-icon">
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-chart-bar"></i>
             </div>
-            <h3>Large Language Models</h3>
-            <p>Advanced prompt engineering and LLM integration for healthcare applications with 95% accuracy improvements</p>
+            <h3>Data Scientist/Manager</h3>
+            <p>Leading Solutions, LLC | USDA Forest Service (Nov 2025 - Present). Data science and management role supporting federal initiatives.</p>
             <div class="tech-stack-mini">
-                <span>GPT-4</span>
-                <span>Claude</span>
-                <span>Llama</span>
+                <span>Data Science</span>
+                <span>AI/ML</span>
+                <span>Analytics</span>
             </div>
         </div>
         <div class="highlight-card ml-card">
             <div class="card-icon">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-robot"></i>
             </div>
-            <h3>Predictive Analytics</h3>
-            <p>Healthcare prediction models achieving 92% accuracy in patient outcome forecasting using ensemble methods</p>
+            <h3>Product Manager & Developer</h3>
+            <p>UNC Chapel Hill School of Medicine (Jan 2023 - Nov 2025). Led AI-powered tools development, integrating LLMs for clinical research and healthcare delivery.</p>
             <div class="tech-stack-mini">
-                <span>TensorFlow</span>
-                <span>PyTorch</span>
-                <span>Scikit-learn</span>
+                <span>LLMs</span>
+                <span>Product Management</span>
+                <span>Healthcare AI</span>
             </div>
         </div>
         <div class="highlight-card automation-card">
             <div class="card-icon">
-                <i class="fas fa-cogs"></i>
+                <i class="fas fa-tasks"></i>
             </div>
-            <h3>Intelligent Automation</h3>
-            <p>End-to-end ML pipelines processing 10M+ healthcare records with real-time inference capabilities</p>
+            <h3>Project & Program Management</h3>
+            <p>UNC Chapel Hill School of Medicine (2019 - 2023). Progressive leadership roles from Administrative Assistant to Project Manager, building healthcare systems expertise.</p>
             <div class="tech-stack-mini">
-                <span>Kubeflow</span>
-                <span>MLflow</span>
-                <span>Apache Airflow</span>
+                <span>Project Management</span>
+                <span>Clinical Research</span>
+                <span>Healthcare Systems</span>
             </div>
         </div>
     </div>
@@ -462,19 +462,19 @@ title: Home
         </div>
         <div class="education-details">
             <h3>Master of Professional Science (MPS)</h3>
-            <h4>Biomedical Health Informatics</h4>
+            <h4>Bioinformatics & Health Informatics</h4>
             <p class="institution">
                 <i class="fas fa-map-marker-alt"></i>
-                University of North Carolina at Chapel Hill
+                University of North Carolina at Chapel Hill (2021-2025)
             </p>
             <p class="specialization">
-                <strong>Specialization:</strong> Healthcare AI, Clinical Informatics, Health Information Systems
+                <strong>Focus:</strong> AI in Healthcare, Clinical Informatics, Bioinformatics, Health Data Analytics
             </p>
             <div class="credential-highlights">
-                <span class="highlight">🏥 Clinical Systems</span>
+                <span class="highlight">🤖 AI & Machine Learning</span>
+                <span class="highlight">🧬 Bioinformatics</span>
                 <span class="highlight">📊 Health Analytics</span>
-                <span class="highlight">🔒 HIPAA Compliance</span>
-                <span class="highlight">🤝 Interoperability</span>
+                <span class="highlight">🏥 Clinical Systems</span>
             </div>
         </div>
     </div>
