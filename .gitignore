@@ -65,7 +65,10 @@ Thumbs.db
 *.local
 local.*
 
-_config-DESKTOP-08NVQTI.yml
+_config-DESKTOP-*.yml
+_config-LAPTOP-*.yml
+*-LAPTOP-*.html
+*-DESKTOP-*.html
 *.pdf
 *.docx
 *.doc

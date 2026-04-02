@@ -74,13 +74,9 @@ description: Innovative AI engineering and healthcare technology solutions with 
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Case Study
-                        </a>
-                        <a href="https://github.com/poglesbyg" class="project-link secondary">
+                        <a href="https://github.com/poglesbyg" class="project-link" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
-                            Code
+                            GitHub
                         </a>
                     </div>
                 </div>
@@ -126,13 +122,9 @@ description: Innovative AI engineering and healthcare technology solutions with 
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Demo
-                        </a>
-                        <a href="#" class="project-link secondary">
-                            <i class="fas fa-file-alt"></i>
-                            White Paper
+                        <a href="https://github.com/poglesbyg" class="project-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            GitHub
                         </a>
                     </div>
                 </div>
@@ -178,13 +170,9 @@ description: Innovative AI engineering and healthcare technology solutions with 
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-play"></i>
-                            Live Demo
-                        </a>
-                        <a href="#" class="project-link secondary">
-                            <i class="fas fa-chart-bar"></i>
-                            Analytics
+                        <a href="https://github.com/poglesbyg" class="project-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            GitHub
                         </a>
                     </div>
                 </div>
@@ -396,9 +384,9 @@ description: Innovative AI engineering and healthcare technology solutions with 
                     </div>
                 </div>
                 <div class="project-footer">
-                    <a href="#" class="project-link">
+                    <a href="/architecture" class="project-link">
                         <i class="fas fa-shield-alt"></i>
-                        Security Overview
+                        Architecture Details
                     </a>
                 </div>
             </div>
@@ -435,9 +423,9 @@ description: Innovative AI engineering and healthcare technology solutions with 
                     </div>
                 </div>
                 <div class="project-footer">
-                    <a href="#" class="project-link">
+                    <a href="/architecture" class="project-link">
                         <i class="fas fa-tachometer-alt"></i>
-                        Performance Metrics
+                        Architecture Details
                     </a>
                 </div>
             </div>

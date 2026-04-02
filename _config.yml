@@ -84,9 +84,7 @@ kramdown:
 sass:
   style: compressed
 
-# Analytics (add your tracking IDs)
-google_analytics: # Add your GA4 tracking ID
-google_site_verification: # Add your Google Search Console verification code
+
 
 # Contact information
 contact:

@@ -3,7 +3,7 @@ const urlsToCache = [
   '/',
   '/assets/css/main.css',
   '/assets/js/main.js',
-  '/assets/images/1555515902875.jpeg',
+  '/assets/images/paul-greenwood-headshot.jpeg',
   '/404.html'
 ];
 

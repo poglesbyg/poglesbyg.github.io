@@ -6,7 +6,7 @@ title: Home
 <div class="hero-section-minimal">
     <div class="hero-content-minimal">
         <div class="hero-avatar-minimal">
-            <img src="{{ site.baseurl }}/assets/images/1555515902875.jpeg" alt="Paul Greenwood" class="hero-image" width="100" height="100" fetchpriority="high">
+            <img src="{{ site.baseurl }}/assets/images/paul-greenwood-headshot.jpeg" alt="Paul Greenwood" class="hero-image" width="100" height="100" fetchpriority="high">
         </div>
         <div class="hero-text-minimal">
             <h1>Paul Greenwood</h1>
