@@ -48,24 +48,14 @@ title: Home
     <h2>Recent Work</h2>
     <div class="projects-grid-minimal">
         <div class="project-card-minimal">
-            <h3>Intelligent Clinical Assistant</h3>
+            <h3>Clinical NLP Assistant</h3>
             <p class="project-status">Production</p>
-            <p>AI-powered clinical decision support processing 50,000+ daily notes with 94% diagnostic accuracy, reducing clinician time by 40%.</p>
-            <div class="project-stats">
-                <span>50,000+ notes/day</span>
-                <span>94% accuracy</span>
-                <span>40% time savings</span>
-            </div>
+            <p>NLP system for clinical note processing and diagnostic suggestion. Integrated with Epic EHR via FHIR R4.</p>
         </div>
         <div class="project-card-minimal">
-            <h3>Predictive Risk Analytics</h3>
+            <h3>Patient Risk Stratification</h3>
             <p class="project-status">Live</p>
-            <p>30-day readmission prediction model with 92% accuracy, delivering $1.2M in annual cost savings and reducing readmissions by 30%.</p>
-            <div class="project-stats">
-                <span>92% accuracy</span>
-                <span>$1.2M saved</span>
-                <span>30% fewer readmissions</span>
-            </div>
+            <p>Ensemble ML models for 30-day readmission prediction on AWS.</p>
         </div>
     </div>
     <a href="/projects" class="view-all-link">View all projects →</a>
@@ -80,7 +70,7 @@ title: Home
         </div>
         <div class="expertise-item-minimal">
             <h3>Cloud & Enterprise Architecture</h3>
-            <p>AWS/Azure deployments, microservices, Kubernetes, secure API design, MLOps pipelines, and high-availability systems supporting millions of operations.</p>
+            <p>AWS/Azure deployments, microservices, Kubernetes, secure API design, and MLOps pipelines.</p>
         </div>
     </div>
 </div>

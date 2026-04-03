@@ -5,9 +5,7 @@ layout: default
 
 <div class="page-hero">
     <div class="page-hero-content">
-        <h1><i class="fas fa-sitemap"></i> System Architecture</h1>
-        <p class="page-hero-subtitle">Enterprise-Grade Infrastructure & Design Patterns</p>
-        <p class="page-hero-description">Scalable, maintainable, and secure systems developed through advanced education and practical experience</p>
+        <h1>System Architecture</h1>
     </div>
 </div>
 
@@ -15,7 +13,6 @@ layout: default
 
 <div class="architecture-grid">
     <div class="architecture-card">
-        <i class="fas fa-cubes"></i>
         <h3>Modular Design</h3>
         <ul>
             <li>Independent components</li>
@@ -25,7 +22,6 @@ layout: default
     </div>
 
     <div class="architecture-card">
-        <i class="fas fa-expand-arrows-alt"></i>
         <h3>Scalability</h3>
         <ul>
             <li>Horizontal scaling</li>
@@ -35,7 +31,6 @@ layout: default
     </div>
 
     <div class="architecture-card">
-        <i class="fas fa-shield-alt"></i>
         <h3>Security</h3>
         <ul>
             <li>Multiple security layers</li>
@@ -45,7 +40,6 @@ layout: default
     </div>
 
     <div class="architecture-card">
-        <i class="fas fa-plug"></i>
         <h3>Interoperability</h3>
         <ul>
             <li>Standard protocols</li>
@@ -59,7 +53,7 @@ layout: default
 
 <div class="tech-stack-grid">
     <div class="tech-stack-card">
-        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+        <h3>Frontend</h3>
         <div class="tech-tags">
             <span class="tech-tag">React</span>
             <span class="tech-tag">TypeScript</span>
@@ -68,7 +62,7 @@ layout: default
     </div>
 
     <div class="tech-stack-card">
-        <h3><i class="fas fa-server"></i> Backend</h3>
+        <h3>Backend</h3>
         <div class="tech-tags">
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">Express</span>
@@ -78,7 +72,7 @@ layout: default
     </div>
 
     <div class="tech-stack-card">
-        <h3><i class="fas fa-database"></i> Database</h3>
+        <h3>Database</h3>
         <div class="tech-tags">
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">Redis</span>
@@ -86,7 +80,7 @@ layout: default
     </div>
 
     <div class="tech-stack-card">
-        <h3><i class="fas fa-cogs"></i> DevOps</h3>
+        <h3>DevOps</h3>
         <div class="tech-tags">
             <span class="tech-tag">Docker</span>
             <span class="tech-tag">Kubernetes</span>
@@ -348,69 +342,3 @@ layout: default
     </div>
 </div>
 
-## Future Architecture
-
-### Emerging Technologies
-
-<div class="future-grid">
-    <div class="future-card">
-        <h3>Serverless Architecture</h3>
-        <p>Moving towards event-driven, serverless computing:</p>
-        <ul>
-            <li>Function-as-a-Service (FaaS)</li>
-            <li>Event-driven processing</li>
-            <li>Pay-per-use pricing</li>
-        </ul>
-    </div>
-
-    <div class="future-card">
-        <h3>Edge Computing</h3>
-        <p>Bringing computation closer to data sources:</p>
-        <ul>
-            <li>Edge devices</li>
-            <li>Local processing</li>
-            <li>Reduced latency</li>
-        </ul>
-    </div>
-
-    <div class="future-card">
-        <h3>AI/ML Integration</h3>
-        <p>Incorporating artificial intelligence and machine learning:</p>
-        <ul>
-            <li>Predictive analytics</li>
-            <li>Automated decision making</li>
-            <li>Pattern recognition</li>
-        </ul>
-    </div>
-</div>
-
-### Scalability Roadmap
-
-<div class="roadmap-grid">
-    <div class="roadmap-card">
-        <h3>Performance Targets</h3>
-        <ul>
-            <li>Response time optimization</li>
-            <li>Throughput improvement</li>
-            <li>Resource utilization</li>
-        </ul>
-    </div>
-
-    <div class="roadmap-card">
-        <h3>Capacity Planning</h3>
-        <ul>
-            <li>Resource forecasting</li>
-            <li>Growth projections</li>
-            <li>Infrastructure scaling</li>
-        </ul>
-    </div>
-
-    <div class="roadmap-card">
-        <h3>Technology Evolution</h3>
-        <ul>
-            <li>New technology adoption</li>
-            <li>Legacy system migration</li>
-            <li>Architecture updates</li>
-        </ul>
-    </div>
-</div> 

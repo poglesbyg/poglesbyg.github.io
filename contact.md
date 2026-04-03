@@ -5,9 +5,8 @@ layout: default
 
 <div class="page-hero">
     <div class="page-hero-content">
-        <h1><i class="fas fa-envelope"></i> Get in Touch</h1>
-        <p class="page-hero-subtitle">Let's Collaborate on Healthcare Innovation</p>
-        <p class="page-hero-description">Interested in discussing AI solutions, healthcare technology, or potential collaborations? I'd love to hear from you.</p>
+        <h1>Contact</h1>
+        <p class="page-hero-description">Available for consulting and full-time roles in healthcare AI and data science.</p>
     </div>
 </div>
 
