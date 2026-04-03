@@ -16,8 +16,8 @@ title: Home
                 5+ years building AI and machine learning systems for healthcare. Currently at Leading Solutions, LLC.
             </p>
             <div class="hero-cta-minimal">
-                <a href="#work" class="cta-link">View My Work</a>
-                <a href="/contact" class="cta-link cta-secondary">Get in Touch</a>
+                <a href="#work" class="cta-link cta-secondary">View My Work</a>
+                <a href="/contact" class="cta-link">Get in Touch</a>
             </div>
         </div>
     </div>
