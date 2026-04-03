@@ -107,9 +107,7 @@ const Navigation = {
             icon.className = this.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
         }
 
-        if (!this.isMenuOpen) {
-            this.dropdowns.forEach(d => d.removeAttribute('open'));
-        }
+        this.dropdowns.forEach(d => d.removeAttribute('open'));
     },
 
     handleResize() {
