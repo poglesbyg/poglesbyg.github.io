@@ -503,7 +503,7 @@ a:hover { color: var(--accent-color); }
 
 .expertise-item-minimal {
     padding: var(--spacing-xl);
-    border-left: 3px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     background-color: rgba(168, 153, 104, 0.04);
     border-radius: var(--radius-md);
 }
