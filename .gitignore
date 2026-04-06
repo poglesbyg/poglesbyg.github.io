@@ -72,3 +72,4 @@ _config-LAPTOP-*.yml
 *.pdf
 *.docx
 *.doc
+.gstack/

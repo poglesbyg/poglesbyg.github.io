@@ -16,7 +16,6 @@ title: Home
                 Background in healthcare AI — FHIR, Epic, clinical NLP. Currently doing environmental data science for the federal government.
             </p>
             <div class="hero-cta-minimal">
-                <a href="#work" class="cta-link cta-secondary">View My Work</a>
                 <a href="/contact" class="cta-link">Get in Touch</a>
             </div>
         </div>
@@ -96,6 +95,5 @@ title: Home
     <p>Available for full-time and consulting data science roles. Open to environmental, federal, and research-sector opportunities.</p>
     <div class="cta-buttons">
         <a href="/contact" class="cta-button-primary">Get in Touch</a>
-        <a href="/projects" class="cta-button-secondary">View All Projects</a>
     </div>
 </div>
