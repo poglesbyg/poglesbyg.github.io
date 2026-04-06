@@ -106,6 +106,33 @@ a:hover { color: var(--accent-color); }
     top: 0;
 }
 
+/* Focus Visible — keyboard navigation rings */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Override for elements that have their own focus handling */
+.nav-link:focus-visible,
+.nav-logo:focus-visible,
+.cta-link:focus-visible,
+.cta-button-primary:focus-visible,
+.cta-button-secondary:focus-visible,
+.submit-button:focus-visible,
+.contact-link:focus-visible,
+.social-link:focus-visible,
+.footer-links a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 0;
+}
+
 /* Layout */
 .container {
     width: 100%;
