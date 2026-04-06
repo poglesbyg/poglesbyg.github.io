@@ -62,6 +62,9 @@ exclude:
   - .cursor
   - .giga
   - README.md
+  - CLAUDE.md
+  - TODOS.md
+  - all_repos.md
 
 # Site settings
 lsi: false
