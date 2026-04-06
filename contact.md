@@ -6,7 +6,7 @@ layout: default
 <div class="page-hero">
     <div class="page-hero-content">
         <h1>Contact</h1>
-        <p class="page-hero-description">Available for consulting and full-time roles in healthcare AI and data science.</p>
+        <p class="page-hero-description">Available for full-time and consulting data science roles. Open to environmental, federal, and research-sector opportunities.</p>
     </div>
 </div>
 

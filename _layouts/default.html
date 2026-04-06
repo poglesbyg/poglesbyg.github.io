@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title | default: "Paul Greenwood - Data Scientist & AI Product Manager" }}</title>
-    <meta name="description" content="{{ page.description | default: site.description | default: "Data Scientist and AI Product Manager with 5+ years at UNC Chapel Hill School of Medicine. Expert in AI, Machine Learning, and Large Language Models for healthcare innovation." }}">
-    
+    <title>{{ page.title | default: site.title | default: "Paul Greenwood - Data Scientist" }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | default: "Data scientist building tools for environmental and natural resource challenges. Background in healthcare AI and clinical systems. Currently in federal government data science." }}">
+
     <!-- SEO & Open Graph Tags -->
-    <meta property="og:title" content="{{ page.title | default: site.title | default: "Paul Greenwood - Data Scientist & AI Product Manager" }}">
-    <meta property="og:description" content="{{ page.description | default: site.description | default: "Data Scientist advancing healthcare innovation through AI, machine learning, and large language models." }}">
+    <meta property="og:title" content="{{ page.title | default: site.title | default: "Paul Greenwood - Data Scientist" }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | default: "Data scientist building tools for environmental and natural resource challenges. Background in healthcare AI, FHIR, and clinical systems." }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/paul-greenwood-headshot.jpeg">
@@ -32,8 +32,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Paul Greenwood",
-      "jobTitle": "Data Scientist & AI Product Manager",
-      "description": "Data Scientist advancing healthcare innovation through AI, machine learning, and large language models",
+      "jobTitle": "Data Scientist",
+      "description": "Data scientist building tools for environmental and natural resource challenges. Background in healthcare AI, FHIR, and clinical systems.",
       "url": "{{ site.url }}{{ site.baseurl }}",
       "image": "{{ site.url }}{{ site.baseurl }}/assets/images/paul-greenwood-headshot.jpeg",
       "sameAs": [
@@ -44,7 +44,7 @@
         "@type": "CollegeOrUniversity",
         "name": "University of North Carolina at Chapel Hill"
       },
-      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Large Language Models", "Healthcare Innovation", "Clinical Research", "Data Science"]
+      "knowsAbout": ["Data Science", "Machine Learning", "Environmental Data Science", "Natural Resource Management", "Artificial Intelligence", "Healthcare AI", "FHIR", "Clinical Informatics"]
     }
     </script>
     
@@ -176,6 +176,9 @@
         </div>
     </footer>
 
-    
+
+    <!-- Analytics -->
+    <script data-goatcounter="https://paulg.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </body>
-</html> 
+</html>

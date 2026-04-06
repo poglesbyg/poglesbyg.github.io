@@ -10,10 +10,10 @@ title: Home
         </div>
         <div class="hero-text-minimal">
             <h1>Paul Greenwood</h1>
-            <p class="hero-subtitle">Data Scientist & AI Product Manager</p>
+            <p class="hero-subtitle">Data Scientist — Environmental & Natural Resource Systems</p>
             <p class="hero-bio">
-                Master's in Bioinformatics & Health Informatics from <strong>UNC Chapel Hill</strong>.<br>
-                5+ years building AI and machine learning systems for healthcare. Currently at Leading Solutions, LLC.
+                Data scientist building tools for environmental and natural resource challenges.<br>
+                Background in healthcare AI — FHIR, Epic, clinical NLP. Currently doing environmental data science for the federal government.
             </p>
             <div class="hero-cta-minimal">
                 <a href="#work" class="cta-link cta-secondary">View My Work</a>
@@ -44,29 +44,12 @@ title: Home
     </div>
 </div>
 
-<div id="work" class="recent-projects-minimal">
-    <h2>Recent Work</h2>
-    <div class="projects-grid-minimal">
-        <div class="project-card-minimal">
-            <h3>Clinical NLP Assistant</h3>
-            <p class="project-status">Production</p>
-            <p>NLP system for clinical note processing and diagnostic suggestion. Integrated with Epic EHR via FHIR R4.</p>
-        </div>
-        <div class="project-card-minimal">
-            <h3>Patient Risk Stratification</h3>
-            <p class="project-status">Live</p>
-            <p>Ensemble ML models for 30-day readmission prediction on AWS.</p>
-        </div>
-    </div>
-    <a href="/projects" class="view-all-link">View all projects →</a>
-</div>
-
 <div id="expertise" class="expertise-section-minimal">
     <h2>Core Expertise</h2>
     <div class="expertise-grid-minimal">
         <div class="expertise-item-minimal">
-            <h3>Healthcare AI & Machine Learning</h3>
-            <p>Clinical NLP, FHIR implementation, patient risk stratification, healthcare analytics, and decision support systems. 5+ years scaling AI in medical environments.</p>
+            <h3>Data Science & Applied Machine Learning</h3>
+            <p>ML pipelines, predictive modeling, NLP, and data engineering across complex regulated domains — healthcare AI and federal environmental data science.</p>
         </div>
         <div class="expertise-item-minimal">
             <h3>Cloud & Enterprise Architecture</h3>
@@ -110,7 +93,7 @@ title: Home
 
 <div class="cta-section-minimal">
     <h2>Ready to Work Together?</h2>
-    <p>I'm available for consulting, product leadership, and full-time roles in healthcare AI and data science.</p>
+    <p>Available for full-time and consulting data science roles. Open to environmental, federal, and research-sector opportunities.</p>
     <div class="cta-buttons">
         <a href="/contact" class="cta-button-primary">Get in Touch</a>
         <a href="/projects" class="cta-button-secondary">View All Projects</a>
