@@ -2,6 +2,7 @@
 
 /* CSS Custom Properties */
 :root {
+    color-scheme: light dark;
     --primary-color: #a89968;
     --accent-color: #a89968;
     --background-color: #fafafa;
