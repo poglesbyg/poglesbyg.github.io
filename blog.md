@@ -15,15 +15,11 @@ permalink: /blog/
     <div class="blog-grid">
         {% for post in site.posts %}
         <article class="blog-card">
+            {% if post.image %}
             <div class="blog-image">
-                {% if post.image %}
                 <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-                {% else %}
-                <div class="blog-image-placeholder">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                {% endif %}
             </div>
+            {% endif %}
             <div class="blog-content">
                 <div class="blog-meta">
                     <span class="blog-date">

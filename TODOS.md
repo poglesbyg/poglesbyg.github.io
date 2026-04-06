@@ -16,16 +16,6 @@
 
 ---
 
-## P2 — Blog Post Featured Images
+## ~~P2 — Blog Post Featured Images~~ DONE
 
-**What:** Blog listing shows grey placeholder squares — `<img>` elements with no `src` because posts don't have `featured_image` frontmatter.
-
-**Why:** The placeholders look like broken images, which undercuts credibility on the blog page. Low effort fix but requires a content decision: either add images to existing posts, or suppress the placeholder element entirely when no image is set.
-
-**How to apply (code fix):** In `blog.md` (or wherever the blog listing loop is), wrap the image element in `{% if post.image %}...{% endif %}`. Without a content decision, suppression is cleaner than a broken placeholder.
-
-**Effort:** XS with CC+gstack (~5 min)
-
-**Depends on:** Nothing. Can ship now.
-
-**Added:** 2026-04-06 (FINDING-007 from /design-review)
+**Fixed:** 2026-04-06 — Wrapped the `.blog-image` div in `{% if post.image %}` so cards without images show as clean text cards instead of grey placeholder boxes. When a post has a `image:` frontmatter key, the image renders normally.
