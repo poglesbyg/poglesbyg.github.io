@@ -1,6 +1,6 @@
 # theme: jekyll-theme-minimal
-title: Paul Greenwood - Data Scientist & AI Product Manager
-description: Data Scientist and AI Product Manager with 5+ years at UNC Chapel Hill School of Medicine. MPS in Bioinformatics & Health Informatics. Expert in AI, Machine Learning, and Large Language Models for healthcare innovation and clinical research.
+title: Paul Greenwood - Data Scientist
+description: Data scientist building tools for environmental and natural resource challenges. Background in healthcare AI, FHIR, and clinical systems. Currently doing federal environmental data science at USDA Forest Service.
 baseurl: ""
 url: "https://poglesbyg.github.io"
 
@@ -13,8 +13,8 @@ author:
   linkedin: poglesbyg
 
 # SEO and Social Media
-tagline: "Data Scientist & AI Product Manager"
-keywords: "Data Scientist, AI Product Manager, Healthcare Technology, Machine Learning, Large Language Models, LLMs, Clinical AI, Health Informatics, Bioinformatics, UNC Chapel Hill, USDA Forest Service"
+tagline: "Data Scientist — Environmental & Natural Resource Systems"
+keywords: "Data Scientist, Environmental Data Science, Natural Resource Management, Machine Learning, Python, USDA Forest Service, Healthcare AI, FHIR, Health Informatics, UNC Chapel Hill"
 
 # Build settings
 markdown: kramdown
@@ -97,9 +97,9 @@ contact:
 
 # Professional focus areas
 expertise:
-  - "Artificial Intelligence (AI)"
-  - "Machine Learning"
-  - "Large Language Models (LLMs)"
-  - "Healthcare Innovation & Clinical Research"
-  - "AI-Powered Tools & Systems Development"
-  - "Clinical Decision Support & Workflow Optimization"
+  - "Environmental Data Science"
+  - "Natural Resource Management"
+  - "Machine Learning & Predictive Modeling"
+  - "Federal Data Systems"
+  - "Healthcare AI & Clinical Informatics"
+  - "FHIR & Clinical Systems Integration"
