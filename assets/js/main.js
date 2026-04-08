@@ -157,7 +157,7 @@ const Theme = {
         this.themeToggle = document.querySelector('.theme-toggle');
         this.prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         this.currentTheme = localStorage.getItem('theme') ||
-            (this.prefersDarkScheme.matches ? 'dark' : 'light');
+            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 
         if (this.themeToggle) {
             this.setInitialTheme();
