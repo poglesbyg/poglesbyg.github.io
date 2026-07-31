@@ -65,15 +65,13 @@ Several self-contained HTML files in root are mini-apps separate from the Jekyll
 
 These have their own scripts in `scripts/` and don't share the main CSS/JS.
 
-## Content guidelines (from `.cursorrules`)
+## Content guidelines
 
-When editing portfolio content, the highest-priority featured items are:
-1. Intelligent Clinical Assistant (FHIR R4, Epic EHR, NLP)
-2. Healthcare Data Platform (FHIR R4, unified patient data)
-3. Predictive Risk Analytics (30-day readmission prediction)
-4. Multi-Cloud Infrastructure / API Gateway
+The site is intentionally minimal: a landing page (`index.md`) and a contact page (`contact.md`), nothing else. There are no project/blog/solutions pages to maintain — don't add references to removed pages like `/projects` or `/solutions`.
 
-Key content files: `solutions.md`, `projects.md`, `epds_app.html`, `smartapp.html`
+Current positioning: Data Scientist — Environmental & Natural Resource Systems (USDA Forest Service via Leading Solutions, LLC), with prior background in healthcare AI (FHIR, Epic, clinical NLP) at UNC Chapel Hill. Keep hero/experience copy consistent with `_config.yml`'s `description`, `tagline`, and `expertise` fields — update both together.
+
+Key content files: `index.md`, `contact.md`, `_config.yml`
 
 ## Skill routing
 

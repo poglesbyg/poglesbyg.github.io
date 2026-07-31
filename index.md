@@ -12,7 +12,7 @@ title: Home
             <h1>Paul Greenwood</h1>
             <p class="hero-subtitle">Data Scientist — Environmental & Natural Resource Systems</p>
             <p class="hero-bio">
-                Building tools for environmental and natural resource challenges. Background in healthcare AI — FHIR, Epic, clinical NLP. Currently at USDA Forest Service.
+                Building data tools for federal natural resource work at USDA Forest Service. Background in healthcare AI — FHIR, Epic, clinical NLP.
             </p>
             <div class="hero-cta-minimal">
                 <a href="/contact" class="cta-link">Get in Touch</a>
@@ -37,7 +37,7 @@ title: Home
         <div class="experience-item">
             <h3>Project & Program Management</h3>
             <p class="role-meta">UNC Chapel Hill School of Medicine · 2019–2023</p>
-            <p>Administrative to Project Manager; built healthcare systems expertise across UNC research programs.</p>
+            <p>Progressed from administrative to project management roles, building healthcare systems expertise across UNC research programs.</p>
         </div>
     </div>
 </div>
