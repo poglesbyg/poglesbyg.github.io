@@ -1263,6 +1263,83 @@ a:hover { color: var(--accent-color); }
     margin: var(--spacing-xl) 0;
 }
 
+/* ========== BLOG INDEX ========== */
+.blog-list {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg) var(--spacing-3xl);
+}
+
+.blog-list-item {
+    padding-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-list-item:last-child {
+    border-bottom: none;
+}
+
+.blog-list-date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.blog-list-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.blog-list-item h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.blog-list-item h2 a:hover {
+    color: var(--primary-color);
+}
+
+.blog-list-item p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Tables can be wider than the measure; scroll them rather than the page. */
+.post-content .table-scroll,
+.post-content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.post-content table {
+    border-collapse: collapse;
+    margin: var(--spacing-xl) 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.post-content th,
+.post-content td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.post-content th {
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom-width: 2px;
+}
+
+.post-content tbody tr:last-child td {
+    border-bottom: none;
+}
+
 .post-content ul, .post-content ol {
     margin: var(--spacing-lg) 0;
     padding-left: var(--spacing-xl);
