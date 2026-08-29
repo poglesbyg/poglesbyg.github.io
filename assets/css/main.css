@@ -1973,20 +1973,25 @@ a:hover { color: var(--accent-color); }
         display: block;
     }
 
+    /* A panel under the bar, not a full-screen overlay: .nav-container sets
+       backdrop-filter, which makes it the containing block for fixed-position
+       descendants, so `position: fixed` here would resolve against the 64px bar
+       rather than the viewport. Absolute against that same box is what we want
+       anyway. */
     .nav-links {
         display: none;
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        bottom: 0;
         background: var(--background-color);
+        border-bottom: 1px solid var(--border-color);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: var(--spacing-lg);
+        align-items: stretch;
+        gap: var(--spacing-xs);
         z-index: 999;
-        padding: var(--spacing-xl);
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
     }
 
     .nav-links.active {
@@ -1996,6 +2001,12 @@ a:hover { color: var(--accent-color); }
     .nav-link {
         font-size: 1.1rem;
         padding: var(--spacing-md);
+    }
+
+    /* The toggle shares the panel with the links; left-align it to match. */
+    .nav-links .theme-toggle {
+        align-self: flex-start;
+        margin-left: var(--spacing-sm);
     }
 
     .nav-dropdown .dropdown-content {

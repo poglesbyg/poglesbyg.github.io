@@ -106,6 +106,8 @@ const Navigation = {
         if (icon) {
             icon.className = this.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
         }
+        this.mobileMenuBtn.setAttribute('aria-expanded', String(this.isMenuOpen));
+        this.mobileMenuBtn.setAttribute('aria-label', this.isMenuOpen ? 'Close menu' : 'Open menu');
 
         this.dropdowns.forEach(d => d.removeAttribute('open'));
     },
@@ -117,6 +119,8 @@ const Navigation = {
             this.dropdowns.forEach(d => d.removeAttribute('open'));
             const icon = this.mobileMenuBtn.querySelector('i');
             if (icon) icon.className = 'fas fa-bars';
+            this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            this.mobileMenuBtn.setAttribute('aria-label', 'Open menu');
             document.body.style.overflow = '';
         }
     },
