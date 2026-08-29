@@ -1,4 +1,13 @@
-const CACHE_NAME = 'portfolio-v2';
+---
+layout: null
+---
+// CACHE_NAME is stamped with the build time by Jekyll, so every deploy lands a
+// new cache and the activate handler below drops the previous one. Without that
+// the asset fetch handler is cache-first against a name nobody bumps, and a
+// precached main.css or main.js is served to returning visitors forever.
+// layout: null above is required — _config.yml defaults every file with front
+// matter to the `default` layout, which would wrap this script in HTML.
+const CACHE_NAME = 'portfolio-{{ site.time | date: "%Y%m%d%H%M%S" }}';
 const urlsToCache = [
   '/',
   '/assets/css/main.css',
@@ -15,8 +24,12 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        console.log('Opened cache', CACHE_NAME);
+        // addAll goes through the HTTP cache, which would let a just-bumped
+        // cache refill with the same stale bytes; force revalidation instead.
+        return Promise.all(
+          urlsToCache.map(url => cache.add(new Request(url, { cache: 'reload' })))
+        );
       })
       .catch(err => {
         console.error('Cache addAll failed:', err);

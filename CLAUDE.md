@@ -28,7 +28,8 @@ The site is hosted on GitHub Pages — pushing to `main` deploys automatically. 
 | `_config.yml` | Jekyll config — plugins, permalink structure, kramdown/MathJax settings |
 | `assets/css/main.css` | Single stylesheet (~2085 lines). CSS custom properties at the top define the entire design system. |
 | `assets/js/main.js` | Single JS file. All features are modular functions called on `DOMContentLoaded`. |
-| `_layouts/default.html` | Wraps all pages — nav, footer, theme toggle, service worker registration |
+| `_layouts/default.html` | Wraps all pages — nav, footer, mobile menu button, theme toggle, service worker registration |
+| `service-worker.js` | Jekyll-processed (`layout: null`). `CACHE_NAME` is stamped with `site.time`, so each deploy lands a new cache and `activate` drops the old one. Assets are cache-first, so without that bump a precached `main.css`/`main.js` would be served to returning visitors forever. |
 | `index.md` | Homepage — uses raw HTML within Jekyll's Markdown processing |
 
 ### Content model
@@ -48,6 +49,11 @@ CSS variables are defined in `:root` at the top of `main.css`:
 - Spacing scale: `--spacing-{xs|sm|md|lg|xl|2xl|3xl}`
 
 Dark/light theme is toggled via a `dark-theme` class on `<body>`, persisted in `localStorage`.
+
+`.nav-container` sets `backdrop-filter`, which makes it the containing block for
+fixed-position descendants — `position: fixed` inside the nav resolves against the
+64px bar, not the viewport. The mobile menu panel is `position: absolute` against
+that box for this reason; don't "restore" it to a fixed full-screen overlay.
 
 ### JavaScript modules (in `assets/js/main.js`)
 
