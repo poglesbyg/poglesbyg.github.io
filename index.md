@@ -32,6 +32,11 @@ title: Home
             <p>Environmental data science supporting federal natural resource initiatives.</p>
         </div>
         <div class="experience-item">
+            <h3>Sepsis Early Warning — Independent Project</h3>
+            <p class="role-meta">Clinical machine learning · PhysioNet/CinC 2019 · 2026</p>
+            <p>Early sepsis prediction from ICU time series, built to measure its own failures rather than assert their absence. Moving the model from medical to surgical ICU costs almost no AUROC and 91% of its clinical value — discrimination and the operating point fail independently, and one external AUROC column hides both. <a href="https://github.com/poglesbyg/sepsis-early-warning" target="_blank" rel="noopener noreferrer">Code</a> · <a href="/blog/2026/08/28/your-model-transferred-your-alerts-didnt/">write-up</a>.</p>
+        </div>
+        <div class="experience-item">
             <h3>Product Manager & Developer</h3>
             <p class="role-meta">UNC Chapel Hill School of Medicine · 2023–2025</p>
             <p>Built LLM-powered tools for clinical research and healthcare delivery.</p>
