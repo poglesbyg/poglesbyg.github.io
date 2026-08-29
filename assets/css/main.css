@@ -1947,6 +1947,15 @@ a:hover { color: var(--accent-color); }
 
     .hero-cta-minimal { justify-content: center; }
 
+    /* These sections rely on max-width alone to inset their content, which does
+       nothing once the viewport is narrower than the max — leaving text and card
+       borders flush against both screen edges. Match the hero's inset. */
+    .experience-section-minimal,
+    .recent-projects-minimal {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
     .projects-grid-minimal,
     .expertise-grid-minimal,
     .tech-list-minimal,
