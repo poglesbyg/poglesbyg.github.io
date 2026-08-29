@@ -12,10 +12,12 @@ title: Home
             <h1>Paul Greenwood</h1>
             <p class="hero-subtitle">Data Scientist — Environmental & Natural Resource Systems</p>
             <p class="hero-bio">
-                Building data tools for federal natural resource work at USDA Forest Service. Background in healthcare AI — FHIR, Epic, clinical NLP.
+                Building data tools for federal natural resource work at USDA Forest Service. Background in healthcare AI — FHIR, Epic, clinical NLP. Most of what I write down is about measuring whether a result survives being checked a second way.
             </p>
             <div class="hero-cta-minimal">
-                <a href="/contact" class="cta-link">Get in Touch</a>
+                <a href="/projects" class="cta-link">Projects</a>
+                <a href="/blog" class="cta-link cta-secondary">Writing</a>
+                <a href="/contact" class="cta-link cta-secondary">Get in Touch</a>
             </div>
         </div>
     </div>
@@ -40,4 +42,18 @@ title: Home
             <p>Progressed from administrative to project management roles, building healthcare systems expertise across UNC research programs.</p>
         </div>
     </div>
+</div>
+
+<div class="experience-section-minimal">
+    <h2>Recent writing</h2>
+    <div class="blog-list-compact">
+        {% for post in site.posts limit: 2 %}
+        <article class="blog-list-item">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="blog-list-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        </article>
+        {% endfor %}
+    </div>
+    <a href="/blog" class="view-all-link">All writing →</a>
 </div>

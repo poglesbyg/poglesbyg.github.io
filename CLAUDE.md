@@ -26,7 +26,7 @@ The site is hosted on GitHub Pages — pushing to `main` deploys automatically. 
 | File | Purpose |
 |------|---------|
 | `_config.yml` | Jekyll config — plugins, permalink structure, kramdown/MathJax settings |
-| `assets/css/main.css` | Single stylesheet (~1940 lines). CSS custom properties at the top define the entire design system. |
+| `assets/css/main.css` | Single stylesheet (~2085 lines). CSS custom properties at the top define the entire design system. |
 | `assets/js/main.js` | Single JS file. All features are modular functions called on `DOMContentLoaded`. |
 | `_layouts/default.html` | Wraps all pages — nav, footer, theme toggle, service worker registration |
 | `index.md` | Homepage — uses raw HTML within Jekyll's Markdown processing |
@@ -42,7 +42,9 @@ The site is hosted on GitHub Pages — pushing to `main` deploys automatically. 
 CSS variables are defined in `:root` at the top of `main.css`:
 - Primary accent: `--primary-color: #a89968` (muted taupe)
 - Background: `--bg-color: #09090b` (near-black)
-- Typography: Outfit (headings) + DM Sans (body) from Google Fonts
+- Typography: `--font-heading` and `--font-mono` are both a system monospace stack
+  (ui-monospace / Cascadia Code / Menlo …); only DM Sans is fetched from Google
+  Fonts, for body text. Headings are deliberately mono — don't "fix" them.
 - Spacing scale: `--spacing-{xs|sm|md|lg|xl|2xl|3xl}`
 
 Dark/light theme is toggled via a `dark-theme` class on `<body>`, persisted in `localStorage`.
@@ -67,11 +69,23 @@ These have their own scripts in `scripts/` and don't share the main CSS/JS.
 
 ## Content guidelines
 
-The site is intentionally minimal: a landing page (`index.md`) and a contact page (`contact.md`), nothing else. There are no project/blog/solutions pages to maintain — don't add references to removed pages like `/projects` or `/solutions`.
+The site is intentionally small. Four pages are live and linked from the nav and
+footer: `index.md` (home), `projects.md`, `blog.md` (titled "Writing"), and
+`contact.md`. `/solutions` and `/competencies` were removed — don't add references
+back to them.
+
+The homepage is hero → Experience → Recent writing, where the last section pulls the
+latest two entries from `site.posts`. Adding a post updates the homepage on its own;
+nothing needs editing there.
+
+Posts are long-form and numeric: the house style is one specific measured finding,
+tables for the numbers, a section on how the numbers were produced, and an explicit
+"what this is not". Match the voice of the existing posts rather than a generic blog
+tone.
 
 Current positioning: Data Scientist — Environmental & Natural Resource Systems (USDA Forest Service via Leading Solutions, LLC), with prior background in healthcare AI (FHIR, Epic, clinical NLP) at UNC Chapel Hill. Keep hero/experience copy consistent with `_config.yml`'s `description`, `tagline`, and `expertise` fields — update both together.
 
-Key content files: `index.md`, `contact.md`, `_config.yml`
+Key content files: `index.md`, `projects.md`, `blog.md`, `contact.md`, `_config.yml`
 
 ## Skill routing
 
