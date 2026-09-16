@@ -8,8 +8,9 @@ description: "I spent a week measuring a biomedical knowledge graph system. Five
 ---
 
 *Updated September 2026. Two more results failed, the interval under "What
-survived" turned out to be too narrow, and one real improvement nearly got
-thrown away by the rule this post ends on. The update is at the end.*
+survived" turned out to be too narrow, one real improvement nearly got thrown
+away by the rule this post ends on, and the headline claim came back in a much
+smaller form. The update is at the end.*
 
 The README said Phases 1, 2 and 3 were complete. The test suite had never run:
 a `pyproject.toml` misconfiguration produced an empty `.pth`, so every test
@@ -129,7 +130,9 @@ whole system exists to support.
 leave less subsequent curation in the data, doesn't fit. Lift is already
 normalised by base rate, and 2018 is *worse* than 2020 at depth 500. I don't
 have an account of what makes 2016 special, and the README now says the claim is
-withdrawn rather than offering one.
+withdrawn rather than offering one. A re-run with the improved model later
+brought back a smaller version of it, and suggested what made 2016 special; see
+the update.
 
 ## What survived
 
@@ -184,7 +187,8 @@ number that's about to be withdrawn.
 
 I kept working on the project for a few more weeks, and the rule above got
 tested harder than I expected. It caught two more results, both mine. It also
-came close to discarding the largest real improvement the project has had.
+came close to discarding the largest real improvement the project has had, and
+the headline claim it withdrew came back smaller.
 
 ### Numbers six and seven were mine
 
@@ -278,6 +282,35 @@ I also tried the standard knowledge-graph embedding models. The best of them,
 DistMult, reached 0.664 at 2016, below the 0.694 from counting weighted length-3
 paths. The graph has 5.1 triples per entity and nearly half its entities have
 two edges or fewer, so the limit here is the data rather than the model family.
+
+### The discovery claim replicates, but not at 35x
+
+With the model improved, I re-ran the prospective check from section 5 on the
+same candidate pairs. This time I wrote the pass criteria down before looking:
+lift in the top 100 above 1x at every cutoff, and the highest lift no more than
+five times the lowest. Both passed.
+
+| cutoff | hits in top 100 | lift@100 | hits in top 500 | lift@500 |
+|---|---|---|---|---|
+| 2016 | 2 | 4.7x | 21 | 9.8x |
+| 2018 | 1 | 5.3x | 12 | 12.8x |
+| 2020 | 1 | 8.0x | 6 | 9.6x |
+
+The top 500 is the part that holds up. It's about ten times the base rate at
+every cutoff, and each of the fifteen single-seed rankings clears five times on
+its own. That's still only 1 to 4% precision, so the output remains candidates
+for a person to read, not findings.
+
+The top 100 passed my criteria on almost nothing, one or two hits per cutoff,
+where a single hit moves the lift by five to eight times. My criteria should
+have required a minimum number of hits, and they didn't. Single seeds at 2016
+ranged from 0 to 11 hits in the top 100, which is the likeliest account of the
+original 35x: one good draw, not something special about that year.
+
+This was also where I'd planned to settle whether to weight the blend toward
+length-5 paths, which had ranked the top of the list better while losing AUC.
+Its cutoffs disagreed tenfold, 2.3x at 2016 against 24.1x at 2020, so it
+didn't pass the same test.
 
 ---
 
