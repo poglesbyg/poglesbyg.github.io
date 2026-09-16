@@ -7,6 +7,10 @@ tags: [knowledge-graphs, link-prediction, replication, graphrag, biomedical]
 description: "I spent a week measuring a biomedical knowledge graph system. Five separate results looked solid at a single configuration and dissolved under a second one. Here is each mechanism, and the one that nearly shipped as a feature."
 ---
 
+*Updated September 2026. Two more results failed, the interval under "What
+survived" turned out to be too narrow, and one real improvement nearly got
+thrown away by the rule this post ends on. The update is at the end.*
+
 The README said Phases 1, 2 and 3 were complete. The test suite had never run:
 a `pyproject.toml` misconfiguration produced an empty `.pth`, so every test
 errored at collection and nobody noticed. That's where
@@ -133,7 +137,8 @@ Replication isn't only a way to lose results. Three held up under the same
 scrutiny that killed the others:
 
 - **Link prediction at AUC 0.752 ± 0.007**, eight seeds, intervals disjoint from
-  the 0.692 structural baseline.
+  the 0.692 structural baseline. That interval was too narrow, for reasons in
+  the update below.
 - **Retrieval at MRR 0.81**, hit-rate 0.98, on 57 queries whose relevance
   judgements come from CIVIC citations rather than from me or from an LLM
   grading its own retrieval.
@@ -175,14 +180,115 @@ single-seed or single-cutoff number is a hypothesis. The harnesses that caught
 all five are in the repository, and running them is cheaper than believing a
 number that's about to be withdrawn.
 
+## Update, September 2026: seven, and one that went the other way
+
+I kept working on the project for a few more weeks, and the rule above got
+tested harder than I expected. It caught two more results, both mine. It also
+came close to discarding the largest real improvement the project has had.
+
+### Numbers six and seven were mine
+
+Six: I added protein-interaction edges from STRING and fed them to the hybrid
+model. Four seeds showed AUC up 0.025. Eight seeds showed nothing, because one
+seed in the four-seed baseline had landed at 0.676 and dragged its mean down. I'd
+done that shortly after publishing a post about exactly this.
+
+Seven: the model carrying the headline number turned out to have the same input
+problem described above, text features at a mean pairwise cosine of 0.927. I
+predicted it explained that model's wide seed spread. Centring the features
+tightened the spread 4.2x at the 2016 cutoff. At 2020 it didn't change it, and
+for the GNN on its own the spread got wider.
+
+### The interval under "What survived" was too narrow
+
+Two separate problems were inflating confidence.
+
+Runs weren't reproducible for a fixed seed, which the repo had recorded as a
+fact of life rather than a bug. The training graph was built from a Python set,
+so edge order changed with the hash seed between processes. Many edges share a
+publication year and the temporal sort was stable, so that arbitrary order
+decided which edges landed in the validation slice. Separately, multi-threaded
+aggregation summed floats in whatever order the threads finished. Sorting the
+edges and training on one thread made three separate processes agree to six
+decimal places. Every variance figure before that mixed seed variance with
+process noise.
+
+The hybrid's blend weight was also chosen on a validation slice that leaked.
+Validation positives were scored while their own edges were still in the graph,
+so a path counter could walk the edge it was being asked to predict. That
+inflated length-3 path scores 3.48x, and the negatives got no such boost. With
+the leak fixed, choosing a weight at all did worse than not choosing one: a
+fixed even blend reached 0.7451 ± 0.0123 against 0.7404 ± 0.0214. The leaky
+version had reported ± 0.0066. It looked stable because the leak pushed every
+seed toward the same answer.
+
+### The rule nearly discarded the biggest win
+
+The training loop took one optimizer step per epoch, and early stopping fired
+after 75 to 135 epochs, so the model was fitted in about 150 gradient updates.
+Eight steps per epoch looked better in every configuration, and in every
+configuration its seed range overlapped the baseline's. By the rule this post
+ends on, that's no difference.
+
+Both arms used the same seeds, though, and comparing ranges throws that pairing
+away. Compared seed by seed, eight steps beat one on AUC in **29 of 32** pairs
+across two models and two cutoffs, and on average precision in 31 of 32. The
+worst loss was 0.009 and the best win 0.101. Sixteen and thirty-two steps didn't
+beat eight (6 of 16 and 8 of 16 pairs), so eight is where it levels off.
+
+Overlapping intervals are a reasonable test for independent samples. When the
+runs share seeds it's the wrong test, and it fails in the direction of finding
+nothing.
+
+### Check whether anything can reach the new data
+
+The STRING edges join genes to genes. Adding 1,862 of them changed the length-3
+path count for **0 of 1,388** test pairs. That isn't weak signal. For a gene-gene
+edge to sit on a length-3 path from a variant to a disease, some gene has to be
+adjacent to that disease, and CIVIC has no gene-disease edges at all. At length
+5 the same edges are reachable, and a length-5 path counter gained 0.017 AUC with
+seed ranges that don't overlap.
+
+The same check settled multi-hop retrieval before I ran anything. All 44
+resolvable bridge entities in that query set are diseases, and the gene edges
+add a reachable relevant passage for 0 of 55 queries at two hops. Measured
+anyway, hit-rate didn't move.
+
+STRING had one more trap. Its headline score blends seven evidence channels, and
+one is co-occurrence in PubMed abstracts, the same papers CIVIC's curators read.
+Among CIVIC's genes that channel alone contributes 14,380 edges, against 1,862
+from lab experiments. Using the combined score would've meant predicting the
+labels from the labels.
+
+### Most of the gain is in ranking, and the limit is the data
+
+Same harness and same seeds, before and after the optimizer change:
+
+| cutoff | steps per epoch | AUC | average precision | Hits@100 |
+|---|---|---|---|---|
+| 2016 | 1 | 0.745 | 0.261 | 0.071 |
+| 2016 | 8 | 0.758 | 0.287 | 0.100 |
+| 2020 | 1 | 0.785 | 0.303 | 0.155 |
+| 2020 | 8 | 0.813 | 0.371 | 0.206 |
+
+The 2016 figure under "What survived" went from 0.752 to 0.758. Most of the
+change is in ranking quality and at the later cutoff.
+
+I also tried the standard knowledge-graph embedding models. The best of them,
+DistMult, reached 0.664 at 2016, below the 0.694 from counting weighted length-3
+paths. The graph has 5.1 triples per entity and nearly half its entities have
+two edges or fewer, so the limit here is the data rather than the model family.
+
 ---
 
 The project, the evaluation harnesses, and the docs recording each withdrawn
 claim are on [GitHub](https://github.com/poglesbyg/LitKG). To re-run the
-comparison that killed the headline result:
+comparison that killed the headline result, and the two from the update:
 
 ```bash
 python scripts/replicate_prospective.py --cutoffs 2016 2018 2020
+make evaluate-ppi        # length-3 and length-5 paths, with and without STRING
+make train-lp SEEDS=8
 ```
 
 `docs/Evaluation.md` covers the temporal holdout, the degree-matched
