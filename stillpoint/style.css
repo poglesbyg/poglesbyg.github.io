@@ -77,6 +77,18 @@ kbd, code {
   padding: 1px 5px;
 }
 
+pre {
+  background: var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
 nav.links {
   display: flex;
   flex-wrap: wrap;
