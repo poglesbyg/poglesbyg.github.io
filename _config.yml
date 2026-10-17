@@ -1,105 +1,49 @@
-# theme: jekyll-theme-minimal
-title: Paul Greenwood - Data Scientist
-description: Data scientist building tools for environmental and natural resource challenges. Background in healthcare AI, FHIR, and clinical systems. Currently doing federal environmental data science at USDA Forest Service.
-baseurl: ""
+title: Paul Greenwood
+tagline: Data scientist
+description: Data scientist. I measure whether results survive a second check, and write up what I find when they don't.
 url: "https://poglesbyg.github.io"
+baseurl: ""
+lang: en_US
 
-# Author information
+# Read by jekyll-seo-tag for the <head> meta, Open Graph, and JSON-LD.
 author:
   name: Paul Greenwood
-  email: pogrant@alumni.unc.edu
-  twitter: poglesbyg
-  github: poglesbyg
-  linkedin: poglesbyg
+  url: https://poglesbyg.github.io
+social:
+  name: Paul Greenwood
+  links:
+    - https://github.com/poglesbyg
+    - https://www.linkedin.com/in/poglesbyg/
+# The share image is a square headshot, so ask for the small card. The large
+# card crops it into a banner that buries the title.
+twitter:
+  card: summary
 
-# SEO and Social Media
-tagline: "Data Scientist — Environmental & Natural Resource Systems"
-keywords: "Data Scientist, Environmental Data Science, Natural Resource Management, Machine Learning, Python, USDA Forest Service, Healthcare AI, FHIR, Health Informatics, UNC Chapel Hill"
-
-# Build settings
-markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# SEO Plugin settings
-social:
-  name: Paul Greenwood
-  links:
-    - https://github.com/poglesbyg
-    - https://linkedin.com/in/poglesbyg
+markdown: kramdown
 
-# Defaults
 defaults:
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
-      permalink: /blog/:year/:month/:day/:title/
-      author: Paul Greenwood
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: default
+      image: /assets/images/paul-greenwood-headshot.jpeg
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
 
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
-
-# Exclude files from processing
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor
-  - .bundle
-  - .sass-cache
-  - .git
-  - .cursor
-  - .giga
   - README.md
   - CLAUDE.md
   - TODOS.md
-  - all_repos.md
-
-# Site settings
-lsi: false
-safe: true
-source: .
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-
-# Kramdown settings
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
-
-# Performance settings
-sass:
-  style: compressed
-
-
-
-# Contact information
-contact:
-  email: pogrant@alumni.unc.edu
-  location: "Asheville, North Carolina, USA"
-  availability: "Data Scientist/Manager at Leading Solutions, LLC | USDA Forest Service"
-
-# Professional focus areas
-expertise:
-  - "Environmental Data Science"
-  - "Natural Resource Management"
-  - "Machine Learning & Predictive Modeling"
-  - "Federal Data Systems"
-  - "Healthcare AI & Clinical Informatics"
-  - "FHIR & Clinical Systems Integration"
+  - vendor
+  - node_modules

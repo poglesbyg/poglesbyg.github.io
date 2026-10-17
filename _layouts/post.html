@@ -2,55 +2,20 @@
 layout: default
 ---
 
-<article class="post">
-    <header class="post-header">
-        <div class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-                <i class="far fa-calendar"></i>
-                {{ page.date | date: "%B %-d, %Y" }}
-            </time>
-            {% if page.categories.size > 0 %}
-            <div class="post-categories">
-                {% for category in page.categories %}
-                <span class="post-category">
-                    <i class="fas fa-folder"></i>
-                    {{ category }}
-                </span>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </div>
-        <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.tags.size > 0 %}
-        <div class="post-tags">
-            {% for tag in page.tags %}
-            <span class="post-tag">
-                <i class="fas fa-tag"></i>
-                {{ tag }}
-            </span>
-            {% endfor %}
-        </div>
-        {% endif %}
+<article>
+    <header class="page-header">
+        <h1>{{ page.title }}</h1>
+        <p class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
     </header>
 
-    <div class="post-content">
+    <div class="prose">
         {{ content }}
     </div>
 
-    <footer class="post-footer">
-        <div class="post-navigation">
-            {% if page.previous.url %}
-            <a class="post-prev" href="{{ page.previous.url | relative_url }}">
-                <span class="post-nav-label">Previous Post</span>
-                <span class="post-nav-title">{{ page.previous.title }}</span>
-            </a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="post-next" href="{{ page.next.url | relative_url }}">
-                <span class="post-nav-label">Next Post</span>
-                <span class="post-nav-title">{{ page.next.title }}</span>
-            </a>
-            {% endif %}
-        </div>
-    </footer>
-</article> 
+    {% if page.previous.url or page.next.url %}
+    <nav class="post-nav" aria-label="More writing">
+        {% if page.previous.url %}<a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% endif %}
+        {% if page.next.url %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+    </nav>
+    {% endif %}
+</article>
