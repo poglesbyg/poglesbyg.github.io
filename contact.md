@@ -6,7 +6,7 @@ description: How to reach Paul Greenwood.
 
 <header class="page-header">
     <h1>Contact</h1>
-    <p class="lede">Open to full-time and consulting data science roles, in environmental, federal, and research settings.</p>
+    <p class="lede">Open to full-time roles in health data architecture, AI evaluation, and data governance, especially in healthcare and public health.</p>
 </header>
 
 <ul class="list">

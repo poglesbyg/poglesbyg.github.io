@@ -81,10 +81,11 @@ The homepage is intro, then Writing (latest three posts, automatic), then Projec
 picked by hand, linking to anchors on `/projects`), then Experience. Adding a post updates
 the homepage, the Writing page, the feed, and the sitemap on its own.
 
-Positioning: "Data scientist. I measure whether results survive a second check." That
-through-line ties the posts and projects together; the USDA Forest Service role
-(via Leading Solutions, LLC) and the UNC Chapel Hill clinical background are supporting
-facts in the bio and Experience. Keep `_config.yml`'s `description` consistent with the
+Positioning: "Health data and AI. I check whether the data and the models hold up before
+anyone depends on them." Aimed at health data architecture and AI governance roles. The
+UNC Chapel Hill clinical background (FHIR, Epic, clinical NLP, health informatics MPS)
+leads the bio; the USDA Forest Service role (via Leading Solutions, LLC) is the current
+job. Only state experience the user has confirmed. Keep `_config.yml`'s `description` consistent with the
 homepage lede.
 
 Posts are long-form and numeric: one specific measured finding, tables for the numbers, a

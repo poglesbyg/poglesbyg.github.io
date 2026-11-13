@@ -6,7 +6,7 @@ description: Projects by Paul Greenwood, including clinical model evaluation, Ru
 
 <header class="page-header">
     <h1>Projects</h1>
-    <p class="lede">Open-source work on clinical model evaluation, AI-assisted engineering workflows, and Rust supply-chain security.</p>
+    <p class="lede">Open-source work on clinical model evaluation, auditing third-party code, and keeping AI tools accountable to recorded decisions.</p>
 </header>
 
 <article class="project" id="sepsis-early-warning">
