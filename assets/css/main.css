@@ -268,7 +268,7 @@ pre code { padding: 0; background: none; font-size: inherit; }
     text-align: left;
     white-space: nowrap;
 }
-.prose th { color: var(--text); font-weight: 600; border-bottom-color: var(--faint); }
+.prose th { color: var(--text); font-weight: 600; border-bottom-color: var(--faint); vertical-align: bottom; }
 .prose tbody tr:last-child td { border-bottom: 0; }
 
 .post-nav {
@@ -287,6 +287,9 @@ pre code { padding: 0; background: none; font-size: inherit; }
 @media (max-width: 30rem) {
     :root { --gutter: 1rem; }
     .site-header { margin-bottom: 2.5rem; }
-    .site-header nav { gap: 1rem; }
-    .site-name { font-size: 0.9375rem; }
+    /* Name on its own line, nav underneath, both on the left edge. */
+    .site-header nav { flex-basis: 100%; gap: 1.25rem; }
+    /* Let cells wrap so tables fit the column instead of clipping. */
+    .prose table { font-size: 0.8125rem; }
+    .prose th, .prose td { white-space: normal; padding-right: 0.625em; }
 }
